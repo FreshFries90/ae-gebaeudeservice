@@ -631,7 +631,7 @@ export default function Page() {
                   <span className="material-icons-outlined text-primary text-2xl sm:text-3xl">
                     email
                   </span>
-                  <a className="text-base sm:text-lg hover:text-white" href="mailto:info@ae-service.de">
+                  <a className="text-base sm:text-lg hover:text-white" href="mailto:info@aegebaeudeservice.de">
                     info@aegebaeudeservice.de
                   </a>
                 </li>
