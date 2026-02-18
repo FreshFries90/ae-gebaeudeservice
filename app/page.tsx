@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const PHONE = "+4916096407718";
-const PHONE_LABEL = "0160 96407718";
+const PHONE = "+491757540841";
+const PHONE_LABEL = "0175 75 40 841";
 
 export default function Page() {
   const [status, setStatus] = useState<
