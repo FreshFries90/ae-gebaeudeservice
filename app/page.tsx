@@ -1,10 +1,49 @@
-// app/page.tsx
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
-const PHONE = "+4916096407718"; // tel (E.164)
-const PHONE_LABEL = "0160 96407718"; // Anzeige
+const PHONE = "+4916096407718";
+const PHONE_LABEL = "0160 96407718";
 
 export default function Page() {
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+  const [error, setError] = useState<string>("");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    setError("");
+
+    const formEl = e.currentTarget;
+    const fd = new FormData(formEl);
+
+    try {
+      const res = await fetch("/api/contact", { method: "POST", body: fd });
+      if (res.status === 204) {
+        // Honeypot-Spam -> so tun als wäre es ok (optional)
+        setStatus("success");
+        formEl.reset();
+        return;
+      }
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok || !data?.ok) {
+        setStatus("error");
+        setError(data?.error || "Senden fehlgeschlagen.");
+        return;
+      }
+
+      setStatus("success");
+      formEl.reset();
+    } catch {
+      setStatus("error");
+      setError("Netzwerkfehler. Bitte später erneut versuchen.");
+    }
+  }
   return (
     <>
       {/* Floating Call Button */}
@@ -517,8 +556,7 @@ export default function Page() {
 
               <form
                 className="bg-white p-6 sm:p-8 md:p-10 relative z-10"
-                method="post"
-                action="/api/contact"
+                onSubmit={onSubmit}
               >
                 <h3 className="text-3xl sm:text-4xl font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4">
                   Schnell-Angebot
@@ -586,16 +624,30 @@ export default function Page() {
                   </div>
 
                   <button
-                    className="w-full bg-black text-white font-black uppercase text-lg sm:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group"
+                    className="w-full bg-black text-white font-black uppercase text-lg sm:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group disabled:opacity-60"
                     type="submit"
+                    disabled={status === "sending"}
                   >
-                    JETZT TERMIN SICHERN
+                    {status === "sending"
+                      ? "SENDET..."
+                      : "JETZT TERMIN SICHERN"}
                     <span className="material-icons-outlined group-hover:translate-x-2 transition-transform">
                       arrow_forward
                     </span>
                   </button>
 
-                  {/* optional: kleine DSGVO Notiz */}
+                  {/* Feedback */}
+                  {status === "success" && (
+                    <div className="rounded-lg border-2 border-green-600 bg-green-50 p-4 text-green-800 font-bold">
+                      Danke! Wir melden uns schnellstmöglich.
+                    </div>
+                  )}
+                  {status === "error" && (
+                    <div className="rounded-lg border-2 border-red-600 bg-red-50 p-4 text-red-800 font-bold">
+                      {error || "Senden fehlgeschlagen."}
+                    </div>
+                  )}
+
                   <p className="text-xs text-gray-500 leading-relaxed">
                     Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben
                     zur Bearbeitung Ihrer Anfrage zu.
