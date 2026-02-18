@@ -24,25 +24,6 @@ export function SiteFooter() {
               Maximale Sauberkeit. Minimaler Aufwand. Ihr professioneller
               Partner für gewerbliche Reinigungslösungen.
             </p>
-
-            <div className="flex gap-6">
-              <a
-                className="text-gray-600 hover:text-primary transition-colors"
-                href="#"
-              >
-                <span className="material-icons-outlined text-3xl md:text-4xl">
-                  facebook
-                </span>
-              </a>
-              <a
-                className="text-gray-600 hover:text-primary transition-colors"
-                href="#"
-              >
-                <span className="material-icons-outlined text-3xl md:text-4xl">
-                  language
-                </span>
-              </a>
-            </div>
           </div>
 
           <div>
@@ -56,7 +37,7 @@ export function SiteFooter() {
                 </span>
                 <div>
                   <p className="text-xs font-black uppercase text-gray-600">
-                    Hotline 24/7
+                    Jetzt anrufen
                   </p>
                   <a
                     className="text-xl sm:text-2xl font-black text-white hover:text-primary whitespace-nowrap"
