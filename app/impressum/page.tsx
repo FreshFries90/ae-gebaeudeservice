@@ -36,8 +36,8 @@ export default function Page() {
           <h2>Kontakt</h2>
           <p>
             Telefon:{" "}
-            <a className="text-primary font-bold" href="tel:+4916096407718">
-              0160 96407718
+            <a className="text-primary font-bold" href="tel:+491757540841">
+              01757540841
             </a>
             <br />
             E-Mail:{" "}
