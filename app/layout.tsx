@@ -1,6 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { SiteHeader } from "./components/SiteHeader";
+import { SiteFooter } from "./components/SiteFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +26,6 @@ export default function RootLayout({
   return (
     <html lang="de" className={`scroll-smooth ${inter.variable}`}>
       <head>
-        {/* Material Icons / Symbols wie im HTML */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
@@ -33,8 +35,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         />
       </head>
+
       <body className="bg-surface-light dark:bg-background-dark text-text-main dark:text-gray-100 font-display selection:bg-primary selection:text-white overflow-x-hidden">
-        {children}
+        <SiteHeader />
+
+        {/* wichtig: Offset für fixed Header */}
+        <div className="pt-20 md:pt-24">{children}</div>
+
+        <SiteFooter />
       </body>
     </html>
   );

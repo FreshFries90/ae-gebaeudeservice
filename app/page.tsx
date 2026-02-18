@@ -1,3 +1,4 @@
+// app/page.tsx
 import Image from "next/image";
 
 const PHONE = "+4916096407718"; // tel (E.164)
@@ -12,52 +13,13 @@ export default function Page() {
         href={`tel:${PHONE}`}
         aria-label="Jetzt anrufen"
       >
-        <span className="material-icons-outlined text-2xl md:text-4xl">phone</span>
+        <span className="material-icons-outlined text-2xl md:text-4xl">
+          phone
+        </span>
       </a>
 
-      {/* Header */}
-      <header className="fixed w-full z-50 top-0 bg-surface-light backdrop-blur-md border-b-2 border-primary shadow-xl">
-        <div className="container mx-auto px-4 md:px-6 h-20 md:h-24 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="w-12 h-10 md:w-14 md:h-12 bg-black text-primary -skew-x-12 rounded flex items-center justify-center font-black text-xl md:text-2xl border-2 border-primary shadow-[4px_4px_0px_rgba(22,163,74,1)] shrink-0">
-              AE
-            </div>
-
-            <div className="hidden sm:flex flex-col min-w-0">
-              <span className="font-black text-lg md:text-xl tracking-tighter uppercase italic leading-none text-gray-900">
-                Gebäudeservice
-              </span>
-              <span className="text-[11px] md:text-xs font-bold tracking-widest text-primary uppercase">
-                Professionell &amp; Sauber
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 sm:gap-4">
-            <a
-              className="flex flex-col items-center bg-primary text-white px-3 py-2 sm:px-4 md:px-6 rounded-lg animate-glow transition-all hover:scale-105"
-              href={`tel:${PHONE}`}
-            >
-              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest leading-none mb-1">
-                Direkt-Kontakt
-              </span>
-              <span className="text-base sm:text-lg md:text-3xl font-black font-mono tracking-tight leading-none whitespace-nowrap">
-                {PHONE_LABEL}
-              </span>
-            </a>
-
-            <a
-              className="hidden sm:block bg-black text-white text-xs font-bold uppercase tracking-wider py-3 md:py-4 px-4 md:px-6 -skew-x-12 border-2 border-primary shadow-[4px_4px_0px_#16a34a] hover:bg-white hover:text-black transition-all whitespace-nowrap"
-              href="#quote"
-            >
-              Angebot
-            </a>
-          </div>
-        </div>
-      </header>
-
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col pt-24 sm:pt-28 md:pt-32 pb-0 overflow-hidden bg-background-dark">
+      <section className="relative min-h-screen flex flex-col pt-10 sm:pt-12 md:pt-16 pb-0 overflow-hidden bg-background-dark">
         <div className="absolute top-0 right-0 w-[70%] md:w-[60%] h-full bg-primary/10 -skew-x-12 translate-x-1/4 z-0" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 flex-grow flex items-center">
@@ -76,7 +38,8 @@ export default function Page() {
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-xl border-l-4 border-primary pl-4 md:pl-6 py-2">
-                Deutschlands härtester Reinigungsservice für Industrie und Gewerbe. Wir stoppen den Schmutz – sofort.
+                Deutschlands härtester Reinigungsservice für Industrie und
+                Gewerbe. Wir stoppen den Schmutz – sofort.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 md:mb-16 items-stretch sm:items-center">
@@ -230,7 +193,10 @@ export default function Page() {
                     className="bg-primary text-white font-black py-3 px-6 uppercase text-sm flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-colors text-center"
                     href={`tel:${PHONE}`}
                   >
-                    <span className="material-icons-outlined text-sm">phone</span> Anrufen
+                    <span className="material-icons-outlined text-sm">
+                      phone
+                    </span>{" "}
+                    Anrufen
                   </a>
                   <span className="border-2 border-white text-white font-bold py-3 px-6 uppercase text-sm text-center">
                     Jetzt Termin sichern
@@ -259,7 +225,10 @@ export default function Page() {
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
                 </a>
-                <a className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
@@ -285,7 +254,10 @@ export default function Page() {
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
                 </a>
-                <a className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
@@ -309,15 +281,19 @@ export default function Page() {
                   className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-sm">phone</span> Anrufen
+                  <span className="material-icons-outlined text-sm">phone</span>{" "}
+                  Anrufen
                 </a>
-                <a className="font-bold text-black uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-black uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
             </div>
 
-            {/* Underhaltsreinigung */}
+            {/* Unterhaltsreinigung */}
             <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col justify-between">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
@@ -327,7 +303,8 @@ export default function Page() {
                   Unterhaltsreinigung
                 </h4>
                 <p className="text-gray-600 text-base sm:text-lg mb-8">
-                  Büros, Flure &amp; Treppenhäuser – zuverlässig im festen Turnus.
+                  Büros, Flure &amp; Treppenhäuser – zuverlässig im festen
+                  Turnus.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
@@ -337,7 +314,10 @@ export default function Page() {
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
                 </a>
-                <a className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
@@ -353,7 +333,8 @@ export default function Page() {
                   Containerreinigung
                 </h4>
                 <p className="text-gray-400 text-base sm:text-lg mb-8">
-                  Innen &amp; Außen gründlich gereinigt – hygienisch und schnell wieder einsatzbereit.
+                  Innen &amp; Außen gründlich gereinigt – hygienisch und schnell
+                  wieder einsatzbereit.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
@@ -363,7 +344,10 @@ export default function Page() {
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
                 </a>
-                <a className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
@@ -379,7 +363,8 @@ export default function Page() {
                   Containeranlagen
                 </h4>
                 <p className="text-white/80 text-base sm:text-lg mb-8">
-                  Reinigung kompletter Anlagen inkl. Sanitärbereiche &amp; Zugänge – auch kurzfristig.
+                  Reinigung kompletter Anlagen inkl. Sanitärbereiche &amp;
+                  Zugänge – auch kurzfristig.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
@@ -387,9 +372,13 @@ export default function Page() {
                   className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-sm">phone</span> Anrufen
+                  <span className="material-icons-outlined text-sm">phone</span>{" "}
+                  Anrufen
                 </a>
-                <a className="font-bold text-black uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-black uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
@@ -405,7 +394,8 @@ export default function Page() {
                   Grundreinigung
                 </h4>
                 <p className="text-gray-600 text-base sm:text-lg mb-8">
-                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen – ideal bei Übergaben &amp; Neustarts.
+                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
+                  ideal bei Übergaben &amp; Neustarts.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
@@ -415,7 +405,10 @@ export default function Page() {
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
                 </a>
-                <a className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap" href="#quote">
+                <a
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
+                  href="#quote"
+                >
                   Jetzt Termin sichern
                 </a>
               </div>
@@ -436,14 +429,16 @@ export default function Page() {
                   Spezialreinigung
                 </h4>
                 <p className="text-white text-base sm:text-lg md:text-xl max-w-lg mb-8 font-medium">
-                  Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment für jede Herausforderung.
+                  Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment
+                  für jede Herausforderung.
                 </p>
                 <div className="flex">
                   <a
                     className="bg-white text-primary font-black py-3 sm:py-4 px-6 sm:px-8 uppercase text-base sm:text-lg flex items-center gap-3 shadow-xl w-full sm:w-auto justify-center"
                     href={`tel:${PHONE}`}
                   >
-                    <span className="material-icons-outlined">phone</span> Direkt Anrufen
+                    <span className="material-icons-outlined">phone</span>{" "}
+                    Direkt Anrufen
                   </a>
                 </div>
               </div>
@@ -482,7 +477,10 @@ export default function Page() {
       </section>
 
       {/* Quote */}
-      <section className="py-16 sm:py-20 md:py-24 relative bg-background-dark overflow-hidden" id="quote">
+      <section
+        className="py-16 sm:py-20 md:py-24 relative bg-background-dark overflow-hidden"
+        id="quote"
+      >
         <div className="absolute inset-0 clip-diagonal bg-zinc-900 z-0" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-start lg:items-center">
@@ -493,7 +491,8 @@ export default function Page() {
                 <span className="text-primary">STARTEN.</span>
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-md italic">
-                Ein kurzer Anruf spart Stunden an E-Mails. Wir sind bereit, wenn Sie es sind.
+                Ein kurzer Anruf spart Stunden an E-Mails. Wir sind bereit, wenn
+                Sie es sind.
               </p>
 
               <div className="p-6 sm:p-8 md:p-10 bg-primary shadow-[10px_10px_0px_#000000] md:shadow-[15px_15px_0px_#000000]">
@@ -512,12 +511,31 @@ export default function Page() {
               </div>
             </div>
 
+            {/* Form (nur UI; SMTP/Spamfilter kommt über API Route) */}
             <div className="relative">
               <div className="absolute inset-0 bg-primary translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
-              <form className="bg-white p-6 sm:p-8 md:p-10 relative z-10">
+
+              <form
+                className="bg-white p-6 sm:p-8 md:p-10 relative z-10"
+                method="post"
+                action="/api/contact"
+              >
                 <h3 className="text-3xl sm:text-4xl font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4">
                   Schnell-Angebot
                 </h3>
+
+                {/* Honeypot */}
+                <div className="hidden" aria-hidden="true">
+                  <label>
+                    Bitte leer lassen
+                    <input
+                      type="text"
+                      name="company"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </label>
+                </div>
 
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -530,6 +548,7 @@ export default function Page() {
                         placeholder="+49..."
                         type="tel"
                         name="phone"
+                        required
                       />
                     </div>
 
@@ -542,6 +561,7 @@ export default function Page() {
                         placeholder="Name"
                         type="text"
                         name="name"
+                        required
                       />
                     </div>
                   </div>
@@ -554,6 +574,7 @@ export default function Page() {
                       className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
                       name="service"
                       defaultValue="Unterhaltsreinigung"
+                      required
                     >
                       <option>Unterhaltsreinigung</option>
                       <option>Industriereinigung</option>
@@ -566,104 +587,25 @@ export default function Page() {
 
                   <button
                     className="w-full bg-black text-white font-black uppercase text-lg sm:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group"
-                    type="button"
+                    type="submit"
                   >
                     JETZT TERMIN SICHERN
                     <span className="material-icons-outlined group-hover:translate-x-2 transition-transform">
                       arrow_forward
                     </span>
                   </button>
+
+                  {/* optional: kleine DSGVO Notiz */}
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben
+                    zur Bearbeitung Ihrer Anfrage zu.
+                  </p>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-white pt-16 sm:pt-20 md:pt-24 pb-10 md:pb-12 border-t-8 border-primary" id="contact">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-16 md:mb-20">
-            <div className="col-span-1 lg:col-span-2">
-              <div className="flex items-center gap-4 mb-6 md:mb-8">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-primary text-white flex items-center justify-center font-black text-xl md:text-2xl -skew-x-12">
-                  AE
-                </div>
-                <span className="text-2xl sm:text-3xl font-black uppercase tracking-tighter italic">
-                  Gebäudeservice
-                </span>
-              </div>
-
-              <p className="text-gray-500 text-base sm:text-lg md:text-xl max-w-sm mb-8 md:mb-10 leading-relaxed">
-                Maximale Sauberkeit. Minimaler Aufwand. Ihr professioneller Partner für gewerbliche Reinigungslösungen.
-              </p>
-
-              <div className="flex gap-6">
-                <a className="text-gray-600 hover:text-primary transition-colors" href="#">
-                  <span className="material-icons-outlined text-3xl md:text-4xl">facebook</span>
-                </a>
-                <a className="text-gray-600 hover:text-primary transition-colors" href="#">
-                  <span className="material-icons-outlined text-3xl md:text-4xl">language</span>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-black text-lg sm:text-xl uppercase mb-6 md:mb-8 text-primary">
-                Direkt-Kontakt
-              </h4>
-              <ul className="space-y-6 text-gray-400">
-                <li className="flex items-start gap-4">
-                  <span className="material-icons-outlined text-primary text-2xl sm:text-3xl">
-                    phone
-                  </span>
-                  <div>
-                    <p className="text-xs font-black uppercase text-gray-600">Hotline 24/7</p>
-                    <a
-                      className="text-xl sm:text-2xl font-black text-white hover:text-primary whitespace-nowrap"
-                      href={`tel:${PHONE}`}
-                    >
-                      {PHONE_LABEL}
-                    </a>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="material-icons-outlined text-primary text-2xl sm:text-3xl">
-                    email
-                  </span>
-                  <a className="text-base sm:text-lg hover:text-white" href="mailto:info@aegebaeudeservice.de">
-                    info@aegebaeudeservice.de
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-black text-lg sm:text-xl uppercase mb-6 md:mb-8 text-primary">
-                Information
-              </h4>
-              <ul className="space-y-4 text-gray-500 font-bold uppercase text-sm">
-                <li>
-                  <a className="hover:text-primary transition-colors" href="#">
-                    Impressum
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-primary transition-colors" href="#">
-                    Datenschutz
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center pt-10 md:pt-12 border-t border-gray-900">
-            <p className="text-gray-700 text-xs sm:text-sm font-bold uppercase tracking-widest">
-              © 2026 AE Gebäudeservice GmbH. High-Performance Cleaning Solutions.
-            </p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
