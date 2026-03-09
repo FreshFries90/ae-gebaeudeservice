@@ -48,7 +48,7 @@ export function SiteHeader() {
               <div className="invisible absolute left-0 top-full pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
                 <div className="min-w-[220px] overflow-hidden rounded-xl border-2 border-primary bg-white shadow-xl">
                   <a
-                    href="/gebaudereinigung"
+                    href="/gebaeudereinigung"
                     className="block px-4 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-primary hover:text-white"
                   >
                     Gebäudereinigung
