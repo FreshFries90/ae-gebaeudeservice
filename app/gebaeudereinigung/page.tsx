@@ -29,7 +29,7 @@ export default function GebaeudereinigungPage() {
       <section className="relative overflow-hidden bg-background-dark text-white">
         <div className="absolute inset-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUtaIxOR8VTSEKConKLR1O-8OLst0DhzTQ3uVmnjxFiygzFTbDKIPlwtO794vDPbBHDqLiq7TZwEamDhwwhPWV0V36C25byK2ZovIqvMK564hWq2I0kXvPqPzT7IFS20cSqMk-FOFxapxhkEVxhJarjFAjOOy7V_NzVK9f07Ad9Y6U9glkdUBpB_LVMUCCZNSzJV_qomdA5H4IddBFMJyria9J5nXanNzmAzcZ0q7WBl75PkLvWE5tEZLNIo5qxTgAHuURcW57yYM"
+            src="/images/fassadenreinigung.jpg"
             alt="Professionelle Gebäudereinigung im Gewerbebereich"
             fill
             className="object-cover opacity-30"
@@ -121,7 +121,7 @@ export default function GebaeudereinigungPage() {
         <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 items-center">
           <div className="relative min-h-[320px] md:min-h-[500px] overflow-hidden shadow-2xl">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUfDnZc8IOnLj10TOOQqe0AdyEalHC1DWM6cmccKg5orMRjd2WlkEdMpHHgSJuBTtSuxVlWoxzXCskyj1P8k6VpuchM-aUod8stK6Cf8aQhNS00ijMxRIj-hV7Egb7RkMwVOSDgXsobxM_HCifkh8szkSXdUUbiC_oOrcvd8ySPe5-wO-H_2wNCJmYGptSSMyQrB4gM5r-2RY6JtRdjRghyxjoWlFE9bmC9N5L87WcjW3sBsOsy0vsZqfTa0EAS1hsaM0ZGfnDyKs"
+              src="/images/reinigungskraft.jpg"
               alt="Reinigungskraft bei der Gebäudereinigung"
               fill
               className="object-cover"
