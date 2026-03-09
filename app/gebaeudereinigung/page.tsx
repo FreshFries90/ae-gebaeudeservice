@@ -123,6 +123,7 @@ export default function GebaeudereinigungPage() {
             <Image
               src="/images/reinigungskraft.jpg"
               alt="Reinigungskraft bei der Gebäudereinigung"
+              title="Reinigungskraft bei der Gebäudereinigung"
               fill
               className="object-cover"
             />
@@ -307,6 +308,7 @@ export default function GebaeudereinigungPage() {
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUfDnZc8IOnLj10TOOQqe0AdyEalHC1DWM6cmccKg5orMRjd2WlkEdMpHHgSJuBTtSuxVlWoxzXCskyj1P8k6VpuchM-aUod8stK6Cf8aQhNS00ijMxRIj-hV7Egb7RkMwVOSDgXsobxM_HCifkh8szkSXdUUbiC_oOrcvd8ySPe5-wO-H_2wNCJmYGptSSMyQrB4gM5r-2RY6JtRdjRghyxjoWlFE9bmC9N5L87WcjW3sBsOsy0vsZqfTa0EAS1hsaM0ZGfnDyKs"
               alt="Sauberes Objekt nach professioneller Gebäudereinigung"
+              title="Sauberes Objekt nach professioneller Gebäudereinigung"
               fill
               className="object-cover"
             />
