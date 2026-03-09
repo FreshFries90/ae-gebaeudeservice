@@ -237,9 +237,12 @@ export default function Page() {
                     </span>{" "}
                     Anrufen
                   </a>
-                  <span className="border-2 border-white text-white font-bold py-3 px-6 uppercase text-sm text-center">
+                  <a
+                    href="/gebaeudereinigung"
+                    className="border-2 border-white text-white font-bold py-3 px-6 uppercase text-sm text-center"
+                  >
                     Jetzt Termin sichern
-                  </span>
+                  </a>
                 </div>
               </div>
             </div>
