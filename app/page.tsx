@@ -241,7 +241,7 @@ export default function Page() {
                     href="/gebaeudereinigung"
                     className="border-2 border-white text-white font-bold py-3 px-6 uppercase text-sm text-center"
                   >
-                    Jetzt Termin sichern
+                    Mehr erfahren
                   </a>
                 </div>
               </div>
