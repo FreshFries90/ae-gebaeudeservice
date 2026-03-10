@@ -23,7 +23,6 @@ export default function Page() {
     try {
       const res = await fetch("/api/contact", { method: "POST", body: fd });
       if (res.status === 204) {
-        // Honeypot-Spam -> so tun als wäre es ok (optional)
         setStatus("success");
         formEl.reset();
         return;
@@ -44,6 +43,7 @@ export default function Page() {
       setError("Netzwerkfehler. Bitte später erneut versuchen.");
     }
   }
+
   return (
     <>
       {/* Floating Call Button */}
@@ -62,38 +62,38 @@ export default function Page() {
         <div className="absolute top-0 right-0 w-[70%] md:w-[60%] h-full bg-primary/10 -skew-x-12 translate-x-1/4 z-0" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 flex-grow flex items-center">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
-            <div className="lg:col-span-7">
-              <div className="inline-block bg-primary text-white font-bold px-3 sm:px-4 py-1 mb-6 md:mb-8 -rotate-1 shadow-lg uppercase tracking-wider text-xs sm:text-sm">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full min-w-0">
+            <div className="lg:col-span-7 min-w-0">
+              <div className="inline-block max-w-full break-words bg-primary text-white font-bold px-3 sm:px-4 py-1 mb-6 md:mb-8 -rotate-1 shadow-lg uppercase tracking-wider text-xs sm:text-sm">
                 In 24h vor Ort &amp; Einsatzbereit
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-black leading-[0.95] text-white mb-6 md:mb-8 tracking-tighter">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-black leading-[0.95] text-white mb-6 md:mb-8 tracking-tighter break-words">
                 SAUBERKEIT <span className="text-primary italic">IN 24h</span>
                 <br />
-                <span className="text-2xl sm:text-3xl md:text-5xl block mt-3 md:mt-4 text-gray-300">
+                <span className="text-2xl sm:text-3xl md:text-5xl block mt-3 md:mt-4 text-gray-300 break-words">
                   JETZT ANRUFEN &amp; ANGEBOT ERHALTEN
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-xl border-l-4 border-primary pl-4 md:pl-6 py-2">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-xl border-l-4 border-primary pl-4 md:pl-6 py-2 break-words">
                 Deutschlands härtester Reinigungsservice für Industrie und
                 Gewerbe. Wir stoppen den Schmutz – sofort.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 md:mb-16 items-stretch sm:items-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 md:mb-16 items-stretch sm:items-center min-w-0">
                 <a
-                  className="relative w-full sm:w-auto overflow-hidden group bg-primary text-white font-black text-xl md:text-2xl py-5 sm:py-6 md:py-8 px-8 sm:px-10 md:px-14 shadow-[0_0_50px_rgba(22,163,74,0.5)] hover:scale-[1.02] md:hover:scale-105 transition-all uppercase tracking-widest flex items-center justify-center gap-3 md:gap-4"
+                  className="relative w-full sm:w-auto max-w-full overflow-hidden group bg-primary text-white font-black text-lg sm:text-xl md:text-2xl py-5 sm:py-6 md:py-8 px-6 sm:px-10 md:px-14 shadow-[0_0_50px_rgba(22,163,74,0.5)] hover:scale-[1.02] md:hover:scale-105 transition-all uppercase tracking-wide md:tracking-widest flex items-center justify-center gap-3 md:gap-4 text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-3xl md:text-4xl animate-pulse">
+                  <span className="material-icons-outlined text-3xl md:text-4xl animate-pulse shrink-0">
                     phone_in_talk
                   </span>
-                  <span>JETZT ANRUFEN</span>
+                  <span className="break-words">JETZT ANRUFEN</span>
                 </a>
 
                 <a
-                  className="w-full sm:w-auto flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 md:py-6 border-2 border-white/30 text-white font-bold text-base sm:text-lg uppercase tracking-wide hover:bg-white hover:text-black transition-all"
+                  className="w-full sm:w-auto max-w-full flex items-center justify-center px-6 sm:px-10 py-4 sm:py-5 md:py-6 border-2 border-white/30 text-white font-bold text-base sm:text-lg uppercase tracking-wide hover:bg-white hover:text-black transition-all text-center break-words"
                   href="#quote"
                 >
                   Online Angebot
@@ -101,8 +101,8 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 hidden lg:block">
-              <div className="relative w-full max-w-lg aspect-square mask-blob shadow-2xl bg-gray-800 mx-auto">
+            <div className="lg:col-span-5 hidden lg:block min-w-0">
+              <div className="relative w-full max-w-lg aspect-square mask-blob shadow-2xl bg-gray-800 mx-auto overflow-hidden">
                 <Image
                   alt="Industrial cleaning"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUfDnZc8IOnLj10TOOQqe0AdyEalHC1DWM6cmccKg5orMRjd2WlkEdMpHHgSJuBTtSuxVlWoxzXCskyj1P8k6VpuchM-aUod8stK6Cf8aQhNS00ijMxRIj-hV7Egb7RkMwVOSDgXsobxM_HCifkh8szkSXdUUbiC_oOrcvd8ySPe5-wO-H_2wNCJmYGptSSMyQrB4gM5r-2RY6JtRdjRghyxjoWlFE9bmC9N5L87WcjW3sBsOsy0vsZqfTa0EAS1hsaM0ZGfnDyKs"
@@ -121,35 +121,35 @@ export default function Page() {
         <div className="w-full bg-white py-8 sm:py-10 relative z-20 border-t-4 border-primary mt-8 md:mt-12">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-24 grayscale opacity-60 hover:grayscale-0 transition-all text-center">
-              <div className="flex items-center gap-2">
-                <span className="material-icons-outlined text-2xl sm:text-3xl text-primary">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="material-icons-outlined text-2xl sm:text-3xl text-primary shrink-0">
                   badge
                 </span>
-                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic break-words">
                   Festes, geschultes Personal
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-3xl sm:text-4xl text-primary">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="material-symbols-outlined text-3xl sm:text-4xl text-primary shrink-0">
                   verified_user
                 </span>
-                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic break-words">
                   Betriebshaftpflicht
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="material-icons-outlined text-2xl sm:text-3xl text-primary">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="material-icons-outlined text-2xl sm:text-3xl text-primary shrink-0">
                   receipt_long
                 </span>
-                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic break-words">
                   Transparente Preise
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="material-icons-outlined text-2xl sm:text-3xl text-primary">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="material-icons-outlined text-2xl sm:text-3xl text-primary shrink-0">
                   workspace_premium
                 </span>
-                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic break-words">
                   Qualitätsgarantie
                 </span>
               </div>
@@ -160,26 +160,26 @@ export default function Page() {
 
       {/* Emergency strip */}
       <section className="bg-primary py-6 md:py-8 overflow-hidden relative border-y-4 border-black">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-          <div className="flex items-center gap-4 md:gap-6">
-            <span className="material-icons-outlined text-white text-4xl sm:text-5xl md:text-6xl">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 min-w-0">
+          <div className="flex items-center gap-4 md:gap-6 min-w-0">
+            <span className="material-icons-outlined text-white text-4xl sm:text-5xl md:text-6xl shrink-0">
               notification_important
             </span>
-            <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase italic leading-none">
+            <div className="min-w-0">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase italic leading-none break-words">
                 Soforthilfe benötigt?
               </h2>
-              <p className="text-black font-bold uppercase tracking-widest text-[10px] sm:text-sm mt-1">
+              <p className="text-black font-bold uppercase tracking-widest text-[10px] sm:text-sm mt-1 break-words">
                 Jetzt anrufen und Termin sichern.
               </p>
             </div>
           </div>
 
           <a
-            className="bg-black text-white px-6 md:px-10 py-4 md:py-6 text-2xl sm:text-3xl md:text-6xl font-black hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3 shadow-2xl w-full md:w-auto text-center whitespace-nowrap"
+            className="bg-black text-white px-6 md:px-10 py-4 md:py-6 text-2xl sm:text-3xl md:text-6xl font-black hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3 shadow-2xl w-full md:w-auto text-center break-words leading-tight"
             href={`tel:${PHONE}`}
           >
-            {PHONE_LABEL}
+            <span className="break-all sm:break-normal">{PHONE_LABEL}</span>
           </a>
         </div>
       </section>
@@ -187,19 +187,19 @@ export default function Page() {
       {/* Services */}
       <section className="py-16 sm:py-20 md:py-24 bg-white" id="services">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-4">
-            <div>
-              <h2 className="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-4 min-w-0">
+            <div className="min-w-0">
+              <h2 className="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 break-words">
                 Unsere Power-Leistungen
               </h2>
-              <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tight">
+              <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tight break-words">
                 Full Service
                 <br />
                 Reinigung
               </h3>
             </div>
             <a
-              className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 font-black uppercase tracking-widest hover:bg-black transition-colors w-full md:w-auto text-center"
+              className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 font-black uppercase tracking-widest hover:bg-black transition-colors w-full md:w-auto text-center break-words"
               href={`tel:${PHONE}`}
             >
               JETZT TERMIN SICHERN
@@ -217,29 +217,29 @@ export default function Page() {
                 sizes="(min-width: 1024px) 33vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-8 md:p-10 w-full">
+              <div className="absolute bottom-0 left-0 p-6 sm:p-8 md:p-10 w-full min-w-0">
                 <span className="material-icons-outlined text-primary text-4xl md:text-6xl mb-4 block">
                   business
                 </span>
-                <h4 className="text-3xl sm:text-4xl font-black text-white uppercase mb-3 md:mb-4">
+                <h4 className="text-3xl sm:text-4xl font-black text-white uppercase mb-3 md:mb-4 break-words">
                   Gebäudereinigung
                 </h4>
-                <p className="text-gray-300 mb-6 md:mb-8 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="text-gray-300 mb-6 md:mb-8 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity break-words">
                   Komplettservice für Ihre Immobilie. Innen &amp; Außen.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 min-w-0">
                   <a
-                    className="bg-primary text-white font-black py-3 px-6 uppercase text-sm flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-colors text-center"
+                    className="bg-primary text-white font-black py-3 px-6 uppercase text-sm flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-colors text-center break-words"
                     href={`tel:${PHONE}`}
                   >
-                    <span className="material-icons-outlined text-sm">
+                    <span className="material-icons-outlined text-sm shrink-0">
                       phone
-                    </span>{" "}
+                    </span>
                     Anrufen
                   </a>
                   <a
                     href="/gebaeudereinigung"
-                    className="border-2 border-white text-white font-bold py-3 px-6 uppercase text-sm text-center"
+                    className="border-2 border-white text-white font-bold py-3 px-6 uppercase text-sm text-center break-words"
                   >
                     Mehr erfahren
                   </a>
@@ -247,119 +247,124 @@ export default function Page() {
               </div>
             </div>
 
-              {/* Card 2 */}
-<div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between">
-  <div>
-    <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
-      precision_manufacturing
-    </span>
-    <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
-      Industrie
-    </h4>
-    <p className="text-white/80 text-base sm:text-lg mb-8">
-      Spezialreinigung für Maschinen und Werkshallen.
-    </p>
-  </div>
-  <div className="flex justify-between items-center gap-3">
-    <a
-      className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
-      href={`tel:${PHONE}`}
-    >
-      <span className="material-icons-outlined text-sm">phone</span>
-      Anrufen
-    </a>
-    <a
-      className="font-bold text-black uppercase text-sm whitespace-nowrap"
-      href="#quote"
-    >
-      Jetzt Termin sichern
-    </a>
-  </div>
-</div>
-
-              {/* Card 3 */}
-<div className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 border border-gray-200 flex flex-col justify-between">
-  <div>
-    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-      window
-    </span>
-    <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
-      Glas &amp; Fassade
-    </h4>
-    <p className="text-gray-600 text-base sm:text-lg mb-8">
-      Streifenfreier Glanz, auch in extremer Höhe.
-    </p>
-  </div>
-  <div className="flex justify-between items-center gap-3">
-    <a
-      className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap"
-      href={`tel:${PHONE}`}
-    >
-      <span className="material-icons-outlined">phone</span>
-      Anrufen
-    </a>
-    <a
-      className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
-      href="#quote"
-    >
-      Jetzt Termin sichern
-    </a>
-  </div>
-</div>
-
-              {/* Card 4 */}
-              <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between">
-                <div>
-                  <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
-                    construction
-                  </span>
-                  <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
-                    Baureinigung
-                  </h4>
-                  <p className="text-white/80 text-base sm:text-lg mb-8">
-                    Vom Rohbau bis zur Schlüsselübergabe.
-                  </p>
-                </div>
-                <div className="flex justify-between items-center gap-3">
-                  <a
-                    className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
-                    href={`tel:${PHONE}`}
-                  >
-                    <span className="material-icons-outlined text-sm">phone</span>{" "}
-                    Anrufen
-                  </a>
-                  <a
-                    className="font-bold text-black uppercase text-sm whitespace-nowrap"
-                    href="#quote"
-                  >
-                    Jetzt Termin sichern
-                  </a>
-                </div>
+            {/* Card 2 */}
+            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
+              <div>
+                <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
+                  precision_manufacturing
+                </span>
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
+                  Industrie
+                </h4>
+                <p className="text-white/80 text-base sm:text-lg break-words">
+                  Spezialreinigung für Maschinen und Werkshallen.
+                </p>
               </div>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
+                <a
+                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center justify-center gap-2 text-center break-words"
+                  href={`tel:${PHONE}`}
+                >
+                  <span className="material-icons-outlined text-sm shrink-0">
+                    phone
+                  </span>
+                  Anrufen
+                </a>
+                <a
+                  className="font-bold text-black uppercase text-sm text-center break-words"
+                  href="#quote"
+                >
+                  Jetzt Termin sichern
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 border border-gray-200 flex flex-col gap-8">
+              <div>
+                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+                  window
+                </span>
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
+                  Glas &amp; Fassade
+                </h4>
+                <p className="text-gray-600 text-base sm:text-lg break-words">
+                  Streifenfreier Glanz, auch in extremer Höhe.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
+                <a
+                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
+                  href={`tel:${PHONE}`}
+                >
+                  <span className="material-icons-outlined shrink-0">phone</span>
+                  Anrufen
+                </a>
+                <a
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
+                  href="#quote"
+                >
+                  Jetzt Termin sichern
+                </a>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
+              <div>
+                <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
+                  construction
+                </span>
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
+                  Baureinigung
+                </h4>
+                <p className="text-white/80 text-base sm:text-lg break-words">
+                  Vom Rohbau bis zur Schlüsselübergabe.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
+                <a
+                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center justify-center gap-2 text-center break-words"
+                  href={`tel:${PHONE}`}
+                >
+                  <span className="material-icons-outlined text-sm shrink-0">
+                    phone
+                  </span>
+                  Anrufen
+                </a>
+                <a
+                  className="font-bold text-black uppercase text-sm text-center break-words"
+                  href="#quote"
+                >
+                  Jetzt Termin sichern
+                </a>
+              </div>
+            </div>
 
             {/* Unterhaltsreinigung */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col justify-between">
+            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   apartment
                 </span>
-                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
                   Unterhaltsreinigung
                 </h4>
-                <p className="text-gray-600 text-base sm:text-lg mb-8">
+                <p className="text-gray-600 text-base sm:text-lg break-words">
                   Büros, Flure &amp; Treppenhäuser – zuverlässig im festen
                   Turnus.
                 </p>
               </div>
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
                 <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap"
+                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined">phone</span> Anrufen
+                  <span className="material-icons-outlined shrink-0">phone</span>
+                  Anrufen
                 </a>
                 <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
                   href="#quote"
                 >
                   Jetzt Termin sichern
@@ -368,28 +373,29 @@ export default function Page() {
             </div>
 
             {/* Containerreinigung */}
-            <div className="bg-black text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col justify-between">
+            <div className="bg-black text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   local_shipping
                 </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
                   Containerreinigung
                 </h4>
-                <p className="text-gray-400 text-base sm:text-lg mb-8">
+                <p className="text-gray-400 text-base sm:text-lg break-words">
                   Innen &amp; Außen gründlich gereinigt – hygienisch und schnell
                   wieder einsatzbereit.
                 </p>
               </div>
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
                 <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:text-white whitespace-nowrap"
+                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:text-white text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined">phone</span> Anrufen
+                  <span className="material-icons-outlined shrink-0">phone</span>
+                  Anrufen
                 </a>
                 <a
-                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap"
+                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm text-center break-words"
                   href="#quote"
                 >
                   Jetzt Termin sichern
@@ -398,29 +404,31 @@ export default function Page() {
             </div>
 
             {/* Containeranlagen */}
-            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between">
+            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
                   factory
                 </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
                   Containeranlagen
                 </h4>
-                <p className="text-white/80 text-base sm:text-lg mb-8">
+                <p className="text-white/80 text-base sm:text-lg break-words">
                   Reinigung kompletter Anlagen inkl. Sanitärbereiche &amp;
                   Zugänge – auch kurzfristig.
                 </p>
               </div>
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
                 <a
-                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
+                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center justify-center gap-2 text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-sm">phone</span>{" "}
+                  <span className="material-icons-outlined text-sm shrink-0">
+                    phone
+                  </span>
                   Anrufen
                 </a>
                 <a
-                  className="font-bold text-black uppercase text-sm whitespace-nowrap"
+                  className="font-bold text-black uppercase text-sm text-center break-words"
                   href="#quote"
                 >
                   Jetzt Termin sichern
@@ -429,28 +437,29 @@ export default function Page() {
             </div>
 
             {/* Grundreinigung */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col justify-between">
+            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   cleaning_services
                 </span>
-                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
                   Grundreinigung
                 </h4>
-                <p className="text-gray-600 text-base sm:text-lg mb-8">
-                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
-                  ideal bei Übergaben &amp; Neustarts.
+                <p className="text-gray-600 text-base sm:text-lg break-words">
+                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen – ideal
+                  bei Übergaben &amp; Neustarts.
                 </p>
               </div>
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
                 <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap"
+                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined">phone</span> Anrufen
+                  <span className="material-icons-outlined shrink-0">phone</span>
+                  Anrufen
                 </a>
                 <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
                   href="#quote"
                 >
                   Jetzt Termin sichern
@@ -468,20 +477,22 @@ export default function Page() {
                 sizes="(min-width: 1024px) 66vw, 100vw"
               />
               <div className="absolute inset-0 bg-primary/90 mix-blend-multiply" />
-              <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12">
-                <h4 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-4">
+              <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12 min-w-0">
+                <h4 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-4 break-words">
                   Spezialreinigung
                 </h4>
-                <p className="text-white text-base sm:text-lg md:text-xl max-w-lg mb-8 font-medium">
+                <p className="text-white text-base sm:text-lg md:text-xl max-w-lg mb-8 font-medium break-words">
                   Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment
                   für jede Herausforderung.
                 </p>
                 <div className="flex">
                   <a
-                    className="bg-white text-primary font-black py-3 sm:py-4 px-6 sm:px-8 uppercase text-base sm:text-lg flex items-center gap-3 shadow-xl w-full sm:w-auto justify-center"
+                    className="bg-white text-primary font-black py-3 sm:py-4 px-6 sm:px-8 uppercase text-base sm:text-lg flex items-center gap-3 shadow-xl w-full sm:w-auto justify-center text-center break-words"
                     href={`tel:${PHONE}`}
                   >
-                    <span className="material-icons-outlined">phone</span>{" "}
+                    <span className="material-icons-outlined shrink-0">
+                      phone
+                    </span>
                     Direkt Anrufen
                   </a>
                 </div>
@@ -493,27 +504,27 @@ export default function Page() {
 
       {/* Questions CTA */}
       <section className="py-16 sm:py-20 md:py-24 bg-gray-900 overflow-hidden relative">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-6 md:mb-8">
+        <div className="container mx-auto px-4 text-center min-w-0">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-6 md:mb-8 break-words">
             Noch Fragen zum Ablauf?
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-10 md:mb-12">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-10 md:mb-12 break-words">
             Holen Sie sich jetzt Ihre kostenlose Beratung am Telefon.
           </p>
 
-          <div className="inline-block p-1 bg-gradient-to-r from-primary to-primary-accent rounded-2xl shadow-[0_0_50px_rgba(22,163,74,0.3)] w-full sm:w-auto">
-            <div className="bg-black px-6 sm:px-10 md:px-12 py-8 sm:py-10 rounded-xl">
-              <p className="text-primary font-black uppercase tracking-[0.3em] mb-4 text-xs sm:text-sm">
+          <div className="inline-block max-w-full p-1 bg-gradient-to-r from-primary to-primary-accent rounded-2xl shadow-[0_0_50px_rgba(22,163,74,0.3)] w-full sm:w-auto">
+            <div className="bg-black px-4 sm:px-10 md:px-12 py-8 sm:py-10 rounded-xl">
+              <p className="text-primary font-black uppercase tracking-[0.3em] mb-4 text-xs sm:text-sm break-words">
                 Rufen Sie uns direkt an
               </p>
               <a
-                className="text-2xl sm:text-4xl md:text-7xl font-black text-white hover:text-primary transition-colors flex items-center justify-center gap-4 sm:gap-6 whitespace-nowrap"
+                className="text-2xl sm:text-4xl md:text-7xl font-black text-white hover:text-primary transition-colors flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center break-words leading-tight"
                 href={`tel:${PHONE}`}
               >
-                <span className="material-icons-outlined text-3xl sm:text-5xl md:text-7xl">
+                <span className="material-icons-outlined text-3xl sm:text-5xl md:text-7xl shrink-0">
                   call
                 </span>
-                {PHONE_LABEL}
+                <span className="break-all sm:break-normal">{PHONE_LABEL}</span>
               </a>
             </div>
           </div>
@@ -527,47 +538,45 @@ export default function Page() {
       >
         <div className="absolute inset-0 clip-diagonal bg-zinc-900 z-0" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-start lg:items-center">
-            <div className="text-white">
-              <h2 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-8 md:mb-10">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-start lg:items-center min-w-0">
+            <div className="text-white min-w-0">
+              <h2 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-8 md:mb-10 break-words">
                 JETZT
                 <br />
                 <span className="text-primary">STARTEN.</span>
               </h2>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-md italic">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-md italic break-words">
                 Ein kurzer Anruf spart Stunden an E-Mails. Wir sind bereit, wenn
                 Sie es sind.
               </p>
 
-              <div className="p-6 sm:p-8 md:p-10 bg-primary shadow-[10px_10px_0px_#000000] md:shadow-[15px_15px_0px_#000000]">
-                <p className="font-black text-black uppercase tracking-widest mb-4 text-sm">
+              <div className="p-6 sm:p-8 md:p-10 bg-primary shadow-[10px_10px_0px_#000000] md:shadow-[15px_15px_0px_#000000] max-w-full overflow-hidden">
+                <p className="font-black text-black uppercase tracking-widest mb-4 text-sm break-words">
                   Persönliche Beratung
                 </p>
                 <a
-                  className="text-2xl sm:text-3xl md:text-5xl font-black text-white flex items-center gap-3 md:gap-4 whitespace-nowrap"
+                  className="text-2xl sm:text-3xl md:text-5xl font-black text-white flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 break-words leading-tight"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-3xl md:text-4xl">
+                  <span className="material-icons-outlined text-3xl md:text-4xl shrink-0">
                     phone_iphone
                   </span>
-                  {PHONE_LABEL}
+                  <span className="break-all sm:break-normal">{PHONE_LABEL}</span>
                 </a>
               </div>
             </div>
 
-            {/* Form (nur UI; SMTP/Spamfilter kommt über API Route) */}
-            <div className="relative">
+            <div className="relative min-w-0">
               <div className="absolute inset-0 bg-primary translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
 
               <form
-                className="bg-white p-6 sm:p-8 md:p-10 relative z-10"
+                className="bg-white p-6 sm:p-8 md:p-10 relative z-10 min-w-0"
                 onSubmit={onSubmit}
               >
-                <h3 className="text-3xl sm:text-4xl font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4">
+                <h3 className="text-3xl sm:text-4xl font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4 break-words">
                   Schnell-Angebot
                 </h3>
 
-                {/* Honeypot */}
                 <div className="hidden" aria-hidden="true">
                   <label>
                     Bitte leer lassen
@@ -580,14 +589,14 @@ export default function Page() {
                   </label>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-6 min-w-0">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <div>
-                      <label className="block text-xs font-black text-gray-400 uppercase mb-2">
+                    <div className="min-w-0">
+                      <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
                         Telefonnummer
                       </label>
                       <input
-                        className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
+                        className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
                         placeholder="+49..."
                         type="tel"
                         name="phone"
@@ -595,12 +604,12 @@ export default function Page() {
                       />
                     </div>
 
-                    <div>
-                      <label className="block text-xs font-black text-gray-400 uppercase mb-2">
+                    <div className="min-w-0">
+                      <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
                         Ihr Name
                       </label>
                       <input
-                        className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
+                        className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
                         placeholder="Name"
                         type="text"
                         name="name"
@@ -609,12 +618,12 @@ export default function Page() {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-xs font-black text-gray-400 uppercase mb-2">
+                  <div className="min-w-0">
+                    <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
                       Service
                     </label>
                     <select
-                      className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
+                      className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
                       name="service"
                       defaultValue="Unterhaltsreinigung"
                       required
@@ -629,31 +638,32 @@ export default function Page() {
                   </div>
 
                   <button
-                    className="w-full bg-black text-white font-black uppercase text-lg sm:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group disabled:opacity-60"
+                    className="w-full bg-black text-white font-black uppercase text-base sm:text-lg md:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group disabled:opacity-60 text-center break-words"
                     type="submit"
                     disabled={status === "sending"}
                   >
-                    {status === "sending"
-                      ? "SENDET..."
-                      : "JETZT TERMIN SICHERN"}
-                    <span className="material-icons-outlined group-hover:translate-x-2 transition-transform">
+                    <span className="break-words">
+                      {status === "sending"
+                        ? "SENDET..."
+                        : "JETZT TERMIN SICHERN"}
+                    </span>
+                    <span className="material-icons-outlined group-hover:translate-x-2 transition-transform shrink-0">
                       arrow_forward
                     </span>
                   </button>
 
-                  {/* Feedback */}
                   {status === "success" && (
-                    <div className="rounded-lg border-2 border-green-600 bg-green-50 p-4 text-green-800 font-bold">
+                    <div className="rounded-lg border-2 border-green-600 bg-green-50 p-4 text-green-800 font-bold break-words">
                       Danke! Wir melden uns schnellstmöglich.
                     </div>
                   )}
                   {status === "error" && (
-                    <div className="rounded-lg border-2 border-red-600 bg-red-50 p-4 text-red-800 font-bold">
+                    <div className="rounded-lg border-2 border-red-600 bg-red-50 p-4 text-red-800 font-bold break-words">
                       {error || "Senden fehlgeschlagen."}
                     </div>
                   )}
 
-                  <p className="text-xs text-gray-500 leading-relaxed">
+                  <p className="text-xs text-gray-500 leading-relaxed break-words">
                     Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben
                     zur Bearbeitung Ihrer Anfrage zu.
                   </p>
