@@ -29,7 +29,7 @@ export default function IndustriePage() {
       <section className="relative overflow-hidden bg-black text-white">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1600&q=80"
+            src="/images/industriellereinigung.jpg"
             alt="Werkshalle und industrielle Reinigung"
             fill
             priority
@@ -117,7 +117,7 @@ export default function IndustriePage() {
         <div className="container mx-auto grid gap-10 px-4 md:px-6 lg:grid-cols-2 lg:items-center">
           <div className="relative min-h-[320px] overflow-hidden shadow-2xl md:min-h-[520px]">
             <Image
-              src="https://images.unsplash.com/photo-1581092160607-ee22731d8c3b?auto=format&fit=crop&w=1400&q=80"
+              src="/images/industrieflaeche.jpg"
               alt="Industriereinigung in Produktionsumgebung"
               fill
               className="object-cover"
@@ -302,7 +302,7 @@ export default function IndustriePage() {
 
           <div className="relative min-h-[320px] overflow-hidden shadow-2xl md:min-h-[520px]">
             <Image
-              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80"
+              src="/images/bodenreinigung.jpg"
               alt="Saubere Industriehalle nach Reinigung"
               fill
               className="object-cover"
