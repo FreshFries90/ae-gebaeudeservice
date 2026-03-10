@@ -22,8 +22,8 @@ export default function Page() {
 
     try {
       const res = await fetch("/api/contact", { method: "POST", body: fd });
-
       if (res.status === 204) {
+        // Honeypot-Spam -> so tun als wäre es ok (optional)
         setStatus("success");
         formEl.reset();
         return;
@@ -44,7 +44,6 @@ export default function Page() {
       setError("Netzwerkfehler. Bitte später erneut versuchen.");
     }
   }
-
   return (
     <>
       {/* Floating Call Button */}
@@ -65,36 +64,36 @@ export default function Page() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 flex-grow flex items-center">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
             <div className="lg:col-span-7">
-              <div className="inline-block bg-primary text-white font-bold px-3 sm:px-4 py-1 mb-6 md:mb-8 -rotate-1 shadow-lg uppercase tracking-wider text-[clamp(0.7rem,1.3vw,0.9rem)]">
+              <div className="inline-block bg-primary text-white font-bold px-3 sm:px-4 py-1 mb-6 md:mb-8 -rotate-1 shadow-lg uppercase tracking-wider text-xs sm:text-sm">
                 In 24h vor Ort &amp; Einsatzbereit
               </div>
 
-              <h1 className="text-[clamp(2.5rem,7vw,6rem)] font-black leading-[0.95] text-white mb-6 md:mb-8 tracking-tighter">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-black leading-[0.95] text-white mb-6 md:mb-8 tracking-tighter">
                 SAUBERKEIT <span className="text-primary italic">IN 24h</span>
                 <br />
-                <span className="block mt-3 md:mt-4 text-gray-300 text-[clamp(1.25rem,3.8vw,3rem)]">
+                <span className="text-2xl sm:text-3xl md:text-5xl block mt-3 md:mt-4 text-gray-300">
                   JETZT ANRUFEN &amp; ANGEBOT ERHALTEN
                 </span>
               </h1>
 
-              <p className="text-[clamp(1rem,2.2vw,1.5rem)] text-gray-400 mb-8 md:mb-12 max-w-xl border-l-4 border-primary pl-4 md:pl-6 py-2 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-xl border-l-4 border-primary pl-4 md:pl-6 py-2">
                 Deutschlands härtester Reinigungsservice für Industrie und
                 Gewerbe. Wir stoppen den Schmutz – sofort.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 md:mb-16 items-stretch sm:items-center">
                 <a
-                  className="relative w-full sm:w-auto overflow-hidden group bg-primary text-white font-black text-[clamp(1rem,2.4vw,1.5rem)] py-5 sm:py-6 md:py-8 px-8 sm:px-10 md:px-14 shadow-[0_0_50px_rgba(22,163,74,0.5)] hover:scale-[1.02] md:hover:scale-105 transition-all uppercase tracking-widest flex items-center justify-center gap-3 md:gap-4"
+                  className="relative w-full sm:w-auto overflow-hidden group bg-primary text-white font-black text-xl md:text-2xl py-5 sm:py-6 md:py-8 px-8 sm:px-10 md:px-14 shadow-[0_0_50px_rgba(22,163,74,0.5)] hover:scale-[1.02] md:hover:scale-105 transition-all uppercase tracking-widest flex items-center justify-center gap-3 md:gap-4"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-[clamp(1.5rem,3vw,2.25rem)] animate-pulse">
+                  <span className="material-icons-outlined text-3xl md:text-4xl animate-pulse">
                     phone_in_talk
                   </span>
                   <span>JETZT ANRUFEN</span>
                 </a>
 
                 <a
-                  className="w-full sm:w-auto flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 md:py-6 border-2 border-white/30 text-white font-bold text-[clamp(0.95rem,1.8vw,1.125rem)] uppercase tracking-wide hover:bg-white hover:text-black transition-all"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 md:py-6 border-2 border-white/30 text-white font-bold text-base sm:text-lg uppercase tracking-wide hover:bg-white hover:text-black transition-all"
                   href="#quote"
                 >
                   Online Angebot
@@ -126,7 +125,7 @@ export default function Page() {
                 <span className="material-icons-outlined text-2xl sm:text-3xl text-primary">
                   badge
                 </span>
-                <span className="font-black text-[clamp(0.95rem,1.8vw,1.25rem)] tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
                   Festes, geschultes Personal
                 </span>
               </div>
@@ -134,7 +133,7 @@ export default function Page() {
                 <span className="material-symbols-outlined text-3xl sm:text-4xl text-primary">
                   verified_user
                 </span>
-                <span className="font-black text-[clamp(0.95rem,1.8vw,1.25rem)] tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
                   Betriebshaftpflicht
                 </span>
               </div>
@@ -142,7 +141,7 @@ export default function Page() {
                 <span className="material-icons-outlined text-2xl sm:text-3xl text-primary">
                   receipt_long
                 </span>
-                <span className="font-black text-[clamp(0.95rem,1.8vw,1.25rem)] tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
                   Transparente Preise
                 </span>
               </div>
@@ -150,7 +149,7 @@ export default function Page() {
                 <span className="material-icons-outlined text-2xl sm:text-3xl text-primary">
                   workspace_premium
                 </span>
-                <span className="font-black text-[clamp(0.95rem,1.8vw,1.25rem)] tracking-tighter uppercase italic">
+                <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic">
                   Qualitätsgarantie
                 </span>
               </div>
@@ -167,17 +166,17 @@ export default function Page() {
               notification_important
             </span>
             <div>
-              <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-black text-white uppercase italic leading-none">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase italic leading-none">
                 Soforthilfe benötigt?
               </h2>
-              <p className="text-black font-bold uppercase tracking-widest text-[clamp(0.65rem,1.2vw,0.9rem)] mt-1">
+              <p className="text-black font-bold uppercase tracking-widest text-[10px] sm:text-sm mt-1">
                 Jetzt anrufen und Termin sichern.
               </p>
             </div>
           </div>
 
           <a
-            className="bg-black text-white px-6 md:px-10 py-4 md:py-6 text-[clamp(1.5rem,5vw,4rem)] font-black hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3 shadow-2xl w-full md:w-auto text-center whitespace-nowrap leading-none tracking-tight"
+            className="bg-black text-white px-6 md:px-10 py-4 md:py-6 text-2xl sm:text-3xl md:text-6xl font-black hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3 shadow-2xl w-full md:w-auto text-center whitespace-nowrap"
             href={`tel:${PHONE}`}
           >
             {PHONE_LABEL}
@@ -190,17 +189,17 @@ export default function Page() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-4">
             <div>
-              <h2 className="text-primary font-bold tracking-widest uppercase text-[clamp(0.7rem,1.2vw,0.9rem)] mb-2">
+              <h2 className="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">
                 Unsere Power-Leistungen
               </h2>
-              <h3 className="text-[clamp(2rem,6vw,4.5rem)] font-black text-gray-900 uppercase tracking-tight leading-[0.95]">
+              <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tight">
                 Full Service
                 <br />
                 Reinigung
               </h3>
             </div>
             <a
-              className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 font-black uppercase tracking-widest hover:bg-black transition-colors w-full md:w-auto text-center text-[clamp(0.9rem,1.4vw,1rem)]"
+              className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 font-black uppercase tracking-widest hover:bg-black transition-colors w-full md:w-auto text-center"
               href={`tel:${PHONE}`}
             >
               JETZT TERMIN SICHERN
@@ -222,10 +221,10 @@ export default function Page() {
                 <span className="material-icons-outlined text-primary text-4xl md:text-6xl mb-4 block">
                   business
                 </span>
-                <h4 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-black text-white uppercase mb-3 md:mb-4 leading-tight">
+                <h4 className="text-3xl sm:text-4xl font-black text-white uppercase mb-3 md:mb-4">
                   Gebäudereinigung
                 </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-300 mb-6 md:mb-8 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity leading-relaxed">
+                <p className="text-gray-300 mb-6 md:mb-8 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity">
                   Komplettservice für Ihre Immobilie. Innen &amp; Außen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -235,7 +234,7 @@ export default function Page() {
                   >
                     <span className="material-icons-outlined text-sm">
                       phone
-                    </span>
+                    </span>{" "}
                     Anrufen
                   </a>
                   <a
@@ -248,116 +247,119 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col justify-between">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  precision_manufacturing
-                </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black text-gray-900 uppercase mb-4">
-                  Industrie
-                </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-600 mb-8 leading-relaxed">
-                  Spezialreinigung für Maschinen und Werkshallen.
-                </p>
-              </div>
-              <div className="flex justify-between items-center gap-3">
-                <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap text-[clamp(0.9rem,1.4vw,1rem)]"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined">phone</span> Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
-                  href="#quote"
-                >
-                  Jetzt Termin sichern
-                </a>
-              </div>
-            </div>
+              {/* Card 2 */}
+<div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between">
+  <div>
+    <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
+      precision_manufacturing
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
+      Industrie
+    </h4>
+    <p className="text-white/80 text-base sm:text-lg mb-8">
+      Spezialreinigung für Maschinen und Werkshallen.
+    </p>
+  </div>
+  <div className="flex justify-between items-center gap-3">
+    <a
+      className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="font-bold text-black uppercase text-sm whitespace-nowrap"
+      href="#quote"
+    >
+      Jetzt Termin sichern
+    </a>
+  </div>
+</div>
 
-            {/* Card 3 */}
-            <div className="bg-black text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col justify-between">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  window
-                </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black uppercase mb-4">
-                  Glas &amp; Fassade
-                </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-400 mb-8 leading-relaxed">
-                  Streifenfreier Glanz, auch in extremer Höhe.
-                </p>
-              </div>
-              <div className="flex justify-between items-center gap-3">
-                <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:text-white whitespace-nowrap text-[clamp(0.9rem,1.4vw,1rem)]"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined">phone</span> Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap"
-                  href="#quote"
-                >
-                  Jetzt Termin sichern
-                </a>
-              </div>
-            </div>
+              {/* Card 3 */}
+<div className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 border border-gray-200 flex flex-col justify-between">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      window
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
+      Glas &amp; Fassade
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg mb-8">
+      Streifenfreier Glanz, auch in extremer Höhe.
+    </p>
+  </div>
+  <div className="flex justify-between items-center gap-3">
+    <a
+      className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
+      href="#quote"
+    >
+      Jetzt Termin sichern
+    </a>
+  </div>
+</div>
 
-            {/* Card 4 */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col justify-between">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  construction
-                </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black text-gray-900 uppercase mb-4">
-                  Baureinigung
-                </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-600 mb-8 leading-relaxed">
-                  Vom Rohbau bis zur Schlüsselübergabe.
-                </p>
+              {/* Card 4 */}
+              <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between">
+                <div>
+                  <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
+                    construction
+                  </span>
+                  <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
+                    Baureinigung
+                  </h4>
+                  <p className="text-white/80 text-base sm:text-lg mb-8">
+                    Vom Rohbau bis zur Schlüsselübergabe.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center gap-3">
+                  <a
+                    className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
+                    href={`tel:${PHONE}`}
+                  >
+                    <span className="material-icons-outlined text-sm">phone</span>{" "}
+                    Anrufen
+                  </a>
+                  <a
+                    className="font-bold text-black uppercase text-sm whitespace-nowrap"
+                    href="#quote"
+                  >
+                    Jetzt Termin sichern
+                  </a>
+                </div>
               </div>
-              <div className="flex justify-between items-center gap-3">
-                <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap text-[clamp(0.9rem,1.4vw,1rem)]"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined">phone</span> Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
-                  href="#quote"
-                >
-                  Jetzt Termin sichern
-                </a>
-              </div>
-            </div>
 
             {/* Unterhaltsreinigung */}
-            <div className="bg-black text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col justify-between">
+            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col justify-between">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   apartment
                 </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4">
                   Unterhaltsreinigung
                 </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-400 mb-8 leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg mb-8">
                   Büros, Flure &amp; Treppenhäuser – zuverlässig im festen
                   Turnus.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
                 <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:text-white whitespace-nowrap text-[clamp(0.9rem,1.4vw,1rem)]"
+                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
                 </a>
                 <a
-                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm whitespace-nowrap"
+                  className="font-bold text-gray-500 hover:text-black uppercase text-sm whitespace-nowrap"
                   href="#quote"
                 >
                   Jetzt Termin sichern
@@ -371,17 +373,17 @@ export default function Page() {
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   local_shipping
                 </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
                   Containerreinigung
                 </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-400 mb-8 leading-relaxed">
+                <p className="text-gray-400 text-base sm:text-lg mb-8">
                   Innen &amp; Außen gründlich gereinigt – hygienisch und schnell
                   wieder einsatzbereit.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
                 <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:text-white whitespace-nowrap text-[clamp(0.9rem,1.4vw,1rem)]"
+                  className="text-primary font-black uppercase flex items-center gap-2 hover:text-white whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
@@ -401,10 +403,10 @@ export default function Page() {
                 <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
                   factory
                 </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4">
                   Containeranlagen
                 </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-white/80 mb-8 leading-relaxed">
+                <p className="text-white/80 text-base sm:text-lg mb-8">
                   Reinigung kompletter Anlagen inkl. Sanitärbereiche &amp;
                   Zugänge – auch kurzfristig.
                 </p>
@@ -414,7 +416,7 @@ export default function Page() {
                   className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center gap-2 whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-sm">phone</span>
+                  <span className="material-icons-outlined text-sm">phone</span>{" "}
                   Anrufen
                 </a>
                 <a
@@ -432,17 +434,17 @@ export default function Page() {
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   cleaning_services
                 </span>
-                <h4 className="text-[clamp(1.4rem,2.8vw,2rem)] font-black text-gray-900 uppercase mb-4">
+                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4">
                   Grundreinigung
                 </h4>
-                <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-gray-600 mb-8 leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg mb-8">
                   Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
                   ideal bei Übergaben &amp; Neustarts.
                 </p>
               </div>
               <div className="flex justify-between items-center gap-3">
                 <a
-                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap text-[clamp(0.9rem,1.4vw,1rem)]"
+                  className="text-primary font-black uppercase flex items-center gap-2 hover:underline whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
                   <span className="material-icons-outlined">phone</span> Anrufen
@@ -467,19 +469,19 @@ export default function Page() {
               />
               <div className="absolute inset-0 bg-primary/90 mix-blend-multiply" />
               <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12">
-                <h4 className="text-[clamp(1.8rem,4vw,3rem)] font-black text-white uppercase mb-4 leading-tight">
+                <h4 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-4">
                   Spezialreinigung
                 </h4>
-                <p className="text-white text-[clamp(1rem,2vw,1.25rem)] max-w-lg mb-8 font-medium leading-relaxed">
+                <p className="text-white text-base sm:text-lg md:text-xl max-w-lg mb-8 font-medium">
                   Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment
                   für jede Herausforderung.
                 </p>
                 <div className="flex">
                   <a
-                    className="bg-white text-primary font-black py-3 sm:py-4 px-6 sm:px-8 uppercase text-[clamp(1rem,1.7vw,1.125rem)] flex items-center gap-3 shadow-xl w-full sm:w-auto justify-center"
+                    className="bg-white text-primary font-black py-3 sm:py-4 px-6 sm:px-8 uppercase text-base sm:text-lg flex items-center gap-3 shadow-xl w-full sm:w-auto justify-center"
                     href={`tel:${PHONE}`}
                   >
-                    <span className="material-icons-outlined">phone</span>
+                    <span className="material-icons-outlined">phone</span>{" "}
                     Direkt Anrufen
                   </a>
                 </div>
@@ -492,23 +494,23 @@ export default function Page() {
       {/* Questions CTA */}
       <section className="py-16 sm:py-20 md:py-24 bg-gray-900 overflow-hidden relative">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-black text-white uppercase mb-6 md:mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-6 md:mb-8">
             Noch Fragen zum Ablauf?
           </h2>
-          <p className="text-[clamp(1rem,2.2vw,1.5rem)] text-gray-400 mb-10 md:mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-10 md:mb-12">
             Holen Sie sich jetzt Ihre kostenlose Beratung am Telefon.
           </p>
 
           <div className="inline-block p-1 bg-gradient-to-r from-primary to-primary-accent rounded-2xl shadow-[0_0_50px_rgba(22,163,74,0.3)] w-full sm:w-auto">
             <div className="bg-black px-6 sm:px-10 md:px-12 py-8 sm:py-10 rounded-xl">
-              <p className="text-primary font-black uppercase tracking-[0.3em] mb-4 text-[clamp(0.7rem,1.1vw,0.9rem)]">
+              <p className="text-primary font-black uppercase tracking-[0.3em] mb-4 text-xs sm:text-sm">
                 Rufen Sie uns direkt an
               </p>
               <a
-                className="text-[clamp(1.5rem,6vw,4.5rem)] font-black text-white hover:text-primary transition-colors flex items-center justify-center gap-4 sm:gap-6 whitespace-nowrap leading-none tracking-tight"
+                className="text-2xl sm:text-4xl md:text-7xl font-black text-white hover:text-primary transition-colors flex items-center justify-center gap-4 sm:gap-6 whitespace-nowrap"
                 href={`tel:${PHONE}`}
               >
-                <span className="material-icons-outlined text-[clamp(1.5rem,5vw,4rem)]">
+                <span className="material-icons-outlined text-3xl sm:text-5xl md:text-7xl">
                   call
                 </span>
                 {PHONE_LABEL}
@@ -527,25 +529,25 @@ export default function Page() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-start lg:items-center">
             <div className="text-white">
-              <h2 className="text-[clamp(2.5rem,8vw,6rem)] font-black leading-[0.95] mb-8 md:mb-10">
+              <h2 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-8 md:mb-10">
                 JETZT
                 <br />
                 <span className="text-primary">STARTEN.</span>
               </h2>
-              <p className="text-[clamp(1rem,2.2vw,1.5rem)] text-gray-400 mb-8 md:mb-12 max-w-md italic leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-md italic">
                 Ein kurzer Anruf spart Stunden an E-Mails. Wir sind bereit, wenn
                 Sie es sind.
               </p>
 
               <div className="p-6 sm:p-8 md:p-10 bg-primary shadow-[10px_10px_0px_#000000] md:shadow-[15px_15px_0px_#000000]">
-                <p className="font-black text-black uppercase tracking-widest mb-4 text-[clamp(0.75rem,1.2vw,0.9rem)]">
+                <p className="font-black text-black uppercase tracking-widest mb-4 text-sm">
                   Persönliche Beratung
                 </p>
                 <a
-                  className="text-[clamp(1.6rem,4vw,3.2rem)] font-black text-white flex items-center gap-3 md:gap-4 whitespace-nowrap leading-none tracking-tight"
+                  className="text-2xl sm:text-3xl md:text-5xl font-black text-white flex items-center gap-3 md:gap-4 whitespace-nowrap"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined text-[clamp(1.5rem,3vw,2.5rem)]">
+                  <span className="material-icons-outlined text-3xl md:text-4xl">
                     phone_iphone
                   </span>
                   {PHONE_LABEL}
@@ -553,7 +555,7 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Form */}
+            {/* Form (nur UI; SMTP/Spamfilter kommt über API Route) */}
             <div className="relative">
               <div className="absolute inset-0 bg-primary translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
 
@@ -561,7 +563,7 @@ export default function Page() {
                 className="bg-white p-6 sm:p-8 md:p-10 relative z-10"
                 onSubmit={onSubmit}
               >
-                <h3 className="text-[clamp(2rem,4vw,3rem)] font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4 leading-tight">
+                <h3 className="text-3xl sm:text-4xl font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4">
                   Schnell-Angebot
                 </h3>
 
@@ -585,7 +587,7 @@ export default function Page() {
                         Telefonnummer
                       </label>
                       <input
-                        className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all text-[clamp(0.95rem,1.6vw,1rem)]"
+                        className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
                         placeholder="+49..."
                         type="tel"
                         name="phone"
@@ -598,7 +600,7 @@ export default function Page() {
                         Ihr Name
                       </label>
                       <input
-                        className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all text-[clamp(0.95rem,1.6vw,1rem)]"
+                        className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
                         placeholder="Name"
                         type="text"
                         name="name"
@@ -612,7 +614,7 @@ export default function Page() {
                       Service
                     </label>
                     <select
-                      className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none text-[clamp(0.95rem,1.6vw,1rem)]"
+                      className="w-full bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
                       name="service"
                       defaultValue="Unterhaltsreinigung"
                       required
@@ -627,7 +629,7 @@ export default function Page() {
                   </div>
 
                   <button
-                    className="w-full bg-black text-white font-black uppercase text-[clamp(1rem,2vw,1.25rem)] py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group disabled:opacity-60"
+                    className="w-full bg-black text-white font-black uppercase text-lg sm:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group disabled:opacity-60"
                     type="submit"
                     disabled={status === "sending"}
                   >
@@ -639,12 +641,12 @@ export default function Page() {
                     </span>
                   </button>
 
+                  {/* Feedback */}
                   {status === "success" && (
                     <div className="rounded-lg border-2 border-green-600 bg-green-50 p-4 text-green-800 font-bold">
                       Danke! Wir melden uns schnellstmöglich.
                     </div>
                   )}
-
                   {status === "error" && (
                     <div className="rounded-lg border-2 border-red-600 bg-red-50 p-4 text-red-800 font-bold">
                       {error || "Senden fehlgeschlagen."}
