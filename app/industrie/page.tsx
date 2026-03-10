@@ -8,7 +8,7 @@ const PHONE_LABEL = "0175 75 40 841";
 export const metadata: Metadata = {
   title: "Industriereinigung | AE Gebäudeservice",
   description:
-    "Spezialreinigung für Maschinen, Produktionsbereiche und Werkshallen. AE Gebäudeservice reinigt gründlich, zuverlässig und effizient. Jetzt anrufen und Termin sichern.",
+    "Industriereinigung für Maschinen, Werkshallen, Produktionsflächen und stark beanspruchte Betriebsbereiche. AE Gebäudeservice reinigt zuverlässig, gründlich und schnell erreichbar. Jetzt direkt anrufen.",
 };
 
 export default function IndustriePage() {
@@ -47,15 +47,15 @@ export default function IndustriePage() {
             <h1 className="mb-6 text-4xl font-black uppercase leading-[0.95] tracking-tighter sm:text-5xl md:text-7xl">
               Industriereinigung
               <span className="mt-2 block italic text-primary">
-                für Maschinen & Werkshallen
+                für Maschinen, Hallen & Produktionsflächen
               </span>
             </h1>
 
             <p className="mb-8 max-w-3xl border-l-4 border-primary pl-4 text-lg text-gray-300 sm:text-xl md:mb-10 md:pl-6 md:text-2xl">
-              AE Gebäudeservice übernimmt die Spezialreinigung von Maschinen,
-              Produktionsflächen, Hallenbereichen und stark beanspruchten
-              Industrieobjekten. Schnell erreichbar, zuverlässig im Einsatz und
-              mit Fokus auf saubere, sichere Arbeitsumgebungen.
+              AE Gebäudeservice reinigt Maschinenumfelder, Werkshallen,
+              Produktionsflächen und stark beanspruchte Industrieobjekte
+              zuverlässig und ohne unnötige Umwege. Direkt erreichbar, schnell
+              abstimmbar und mit Blick auf saubere, sichere Abläufe im Betrieb.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -106,7 +106,9 @@ export default function IndustriePage() {
               <span className="material-icons-outlined text-3xl text-primary">
                 call
               </span>
-              <span className="font-black uppercase">Direkt telefonisch erreichbar</span>
+              <span className="font-black uppercase">
+                Direkt telefonisch erreichbar
+              </span>
             </div>
           </div>
         </div>
@@ -130,33 +132,32 @@ export default function IndustriePage() {
               Reinigung für anspruchsvolle Bereiche
             </h2>
             <h3 className="mb-6 text-4xl font-black uppercase tracking-tight text-gray-900 md:text-6xl">
-              Saubere Industrieflächen, bessere Abläufe
+              Saubere Flächen, klare Abläufe
             </h3>
 
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <p>
-                In industriellen Bereichen reicht eine klassische Reinigung oft
-                nicht aus. Produktionsrückstände, Staub, Öle, Schmutzschichten
-                und stark beanspruchte Hallenflächen erfordern eine gezielte,
-                professionelle Vorgehensweise. Genau dafür ist unsere
-                Industriereinigung ausgelegt.
+                In der Industrie reicht eine normale Unterhaltsreinigung oft
+                nicht aus. Wo Staub, Produktionsrückstände, Öle, Schmutzfilme
+                oder stark beanspruchte Hallenflächen entstehen, braucht es eine
+                Reinigung, die gezielt auf die tatsächliche Belastung im Betrieb
+                abgestimmt ist.
               </p>
 
               <p>
-                AE Gebäudeservice übernimmt die Spezialreinigung für Maschinen,
-                Hallen, Laufwege, Arbeitsbereiche, Randzonen und sonstige
-                betriebliche Flächen, auf denen Sauberkeit nicht nur für den
-                Eindruck, sondern auch für Ordnung, Sicherheit und einen
-                reibungslosen Ablauf wichtig ist.
+                Genau hier setzt AE Gebäudeservice an. Wir reinigen Maschinen,
+                Hallenbereiche, Laufwege, Arbeitszonen, Randflächen und weitere
+                betriebliche Bereiche dort, wo Sauberkeit nicht nur optisch
+                zählt, sondern auch für Ordnung, Sicherheit und einen
+                funktionierenden Betriebsablauf wichtig ist.
               </p>
 
               <p>
-                Ob regelmäßige Reinigung, punktueller Einsatz oder Unterstützung
-                bei besonders verschmutzten Bereichen: Wir arbeiten lösungs- und
-                einsatzorientiert. Statt langer Abstimmungen setzen wir auf
-                direkte Erreichbarkeit und schnelle Terminabsprachen. Gerade in
-                der Industrie zählt oft jede Stunde deshalb ist der direkte
-                Anruf meist der schnellste Weg zur passenden Lösung.
+                Ob regelmäßig, bei erhöhtem Bedarf oder als gezielter Einsatz in
+                besonders stark verschmutzten Bereichen: Wir arbeiten pragmatisch,
+                zuverlässig und gut erreichbar. Statt langer Abstimmungen setzen
+                wir auf kurze Wege. Gerade im laufenden Betrieb ist der direkte
+                Anruf oft der schnellste Weg zur passenden Lösung.
               </p>
             </div>
 
@@ -179,12 +180,13 @@ export default function IndustriePage() {
               Unsere Leistungen
             </h2>
             <h3 className="mb-6 text-4xl font-black uppercase tracking-tight text-gray-900 md:text-6xl">
-              Spezialreinigung für Industrie & Produktion
+              Industriereinigung, wie sie im Betrieb gebraucht wird
             </h3>
             <p className="text-lg leading-relaxed text-gray-700">
-              Wir unterstützen Unternehmen dort, wo herkömmliche Reinigung an
-              Grenzen stößt: bei Maschinen, Hallenflächen und anspruchsvollen
-              industriellen Einsatzbereichen.
+              Wir unterstützen Unternehmen überall dort, wo herkömmliche
+              Reinigung an ihre Grenzen stößt: an Maschinen, auf Hallenflächen,
+              in produktionsnahen Bereichen und auf stark beanspruchten
+              Betriebsflächen.
             </p>
           </div>
 
@@ -193,22 +195,22 @@ export default function IndustriePage() {
               {
                 icon: "precision_manufacturing",
                 title: "Maschinenreinigung",
-                text: "Reinigung äußerer Maschinenflächen, Gehäuse, Arbeitsbereiche und angrenzender Nutzflächen für ein gepflegtes und ordentliches Gesamtbild.",
+                text: "Reinigung von äußeren Maschinenflächen, Gehäusen, Arbeitsumfeldern und angrenzenden Nutzflächen für mehr Ordnung und einen gepflegten Gesamteindruck.",
               },
               {
                 icon: "warehouse",
                 title: "Werkshallenreinigung",
-                text: "Reinigung von Hallenbereichen, Böden, Laufwegen, Randzonen und stark frequentierten Produktionsflächen.",
+                text: "Reinigung von Hallenbereichen, Böden, Laufwegen, Randzonen und stark genutzten Flächen im laufenden betrieblichen Umfeld.",
               },
               {
                 icon: "factory",
                 title: "Produktionsnahe Bereiche",
-                text: "Gezielte Reinigung in Bereichen mit hoher Belastung durch Staub, Schmutz, Rückstände oder starke tägliche Nutzung.",
+                text: "Gezielte Reinigung in Zonen mit hoher Belastung durch Staub, Rückstände, Schmutzschichten oder starke tägliche Beanspruchung.",
               },
               {
                 icon: "route",
                 title: "Laufwege & Verkehrsflächen",
-                text: "Saubere Wege erhöhen die Ordnung im Betrieb und verbessern den Gesamteindruck innerhalb des Unternehmens.",
+                text: "Saubere Wege sorgen für mehr Ordnung im Objekt, verbessern den Gesamteindruck und unterstützen strukturierte Abläufe im Betrieb.",
               },
               {
                 icon: "construction",
@@ -218,7 +220,7 @@ export default function IndustriePage() {
               {
                 icon: "schedule",
                 title: "Regelmäßig oder flexibel",
-                text: "Einmalige Einsätze, wiederkehrende Reinigungen oder individuelle Absprachen passend zu deinem Betriebsablauf.",
+                text: "Einmalige Einsätze, wiederkehrende Reinigung oder individuelle Absprachen passend zu Betriebszeiten, Auslastung und Bedarf.",
               },
             ].map((item) => (
               <div
@@ -242,15 +244,15 @@ export default function IndustriePage() {
       <section className="bg-black py-16 text-white md:py-20">
         <div className="container mx-auto max-w-5xl px-4 text-center md:px-6">
           <h2 className="mb-6 text-4xl font-black uppercase tracking-tight md:text-6xl">
-            Industriereinigung mit direktem Draht
+            Industriereinigung ohne komplizierte Abstimmung
           </h2>
           <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300 md:text-xl">
-            Wer nach Industriereinigung, Hallenreinigung, Maschinenreinigung
-            oder einer professionellen Spezialreinigung für Produktionsbereiche
-            sucht, braucht keine komplizierten Prozesse, sondern einen
-            Ansprechpartner, der schnell reagiert. AE Gebäudeservice steht für
-            direkte Kommunikation, saubere Ergebnisse und flexible Einsätze in
-            industriellen und gewerblichen Objekten.
+            Wenn du eine Industriereinigung, Hallenreinigung,
+            Maschinenreinigung oder eine zuverlässige Spezialreinigung für
+            Produktionsbereiche suchst, brauchst du vor allem einen
+            Ansprechpartner, der erreichbar ist und verbindlich reagiert. AE
+            Gebäudeservice steht für direkte Kommunikation, saubere Ausführung
+            und Einsätze, die sich an deinen betrieblichen Alltag anpassen.
           </p>
 
           <div className="mt-8">
@@ -272,30 +274,31 @@ export default function IndustriePage() {
               Warum AE Gebäudeservice
             </h2>
             <h3 className="mb-6 text-4xl font-black uppercase tracking-tight text-gray-900 md:text-6xl">
-              Stark bei anspruchsvollen Reinigungsaufgaben
+              Verlässlich bei starken Belastungen
             </h3>
 
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <p>
-                Industrielle Bereiche stellen andere Anforderungen als normale
-                Büro- oder Objektflächen. Hier geht es um robuste Nutzung,
-                starke Verschmutzung, große Flächen und oft auch um laufende
-                Betriebsabläufe. Deshalb braucht es eine Reinigung, die
-                strukturiert, effizient und verlässlich umgesetzt wird.
+                Industrieflächen stellen andere Anforderungen als klassische
+                Büro- oder Standardobjekte. Große Flächen, starke Beanspruchung,
+                hartnäckige Verschmutzungen und laufende Betriebsprozesse
+                verlangen eine Reinigung, die ordentlich geplant und sauber
+                umgesetzt wird.
               </p>
 
               <p>
-                Wir legen Wert auf einen sauberen, professionellen Eindruck und
-                auf eine Ausführung, die sich in deinen Betrieb einfügt. Dabei
-                zählt nicht nur das sichtbare Ergebnis, sondern auch die
-                Erreichbarkeit und die einfache Abstimmung im Vorfeld.
+                Uns ist wichtig, dass die Abstimmung einfach bleibt und das
+                Ergebnis im Alltag spürbar ist. Saubere Flächen, ordentliche
+                Arbeitsbereiche und ein zuverlässiger Einsatz sorgen nicht nur
+                für einen besseren Eindruck, sondern helfen auch dabei, Abläufe
+                im Betrieb klarer und angenehmer zu halten.
               </p>
 
               <p>
                 Ob Werkshalle, Produktionsumgebung oder Maschinenumfeld: Wenn du
-                eine zuverlässige Industriereinigung suchst, ist ein Anruf oft
-                der schnellste Weg. So können Anforderungen direkt besprochen
-                und passende Einsätze ohne Umwege geplant werden.
+                eine Industriereinigung suchst, die erreichbar, gründlich und
+                unkompliziert ist, kannst du uns direkt anrufen und den Einsatz
+                besprechen.
               </p>
             </div>
           </div>
@@ -317,10 +320,10 @@ export default function IndustriePage() {
         <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 text-center md:px-6 lg:flex-row lg:text-left">
           <div>
             <h2 className="text-3xl font-black uppercase italic leading-none text-white md:text-5xl">
-              Spezialreinigung für Industrie anfragen
+              Industriereinigung direkt anfragen
             </h2>
             <p className="mt-2 text-sm font-bold uppercase tracking-widest text-black">
-              Maschinen, Werkshallen, Produktionsflächen — direkt telefonisch.
+              Für Maschinen, Werkshallen und Produktionsflächen.
             </p>
           </div>
 
