@@ -155,7 +155,7 @@ export default function IndustriePage() {
                 bei besonders verschmutzten Bereichen: Wir arbeiten lösungs- und
                 einsatzorientiert. Statt langer Abstimmungen setzen wir auf
                 direkte Erreichbarkeit und schnelle Terminabsprachen. Gerade in
-                der Industrie zählt oft jede Stunde — deshalb ist der direkte
+                der Industrie zählt oft jede Stunde deshalb ist der direkte
                 Anruf meist der schnellste Weg zur passenden Lösung.
               </p>
             </div>
