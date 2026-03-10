@@ -280,7 +280,7 @@ export default function Page() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 border border-gray-200 flex flex-col gap-8">
+            <div className="bg-gray-50 text-gray-900 p-6 sm:p-8 md:p-10 border border-gray-200 flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
                   window
