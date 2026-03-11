@@ -410,7 +410,7 @@ export default function Page() {
             </div>
 
             {/* Grundreinigung */}
-            <div className="md:col-span-2 bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
+            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
                   cleaning_services
