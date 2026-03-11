@@ -54,7 +54,7 @@ export function SiteHeader() {
                     Gebäudereinigung
                   </a>
                   <a
-                    href="/industrie"
+                    href="/industriereinigung"
                     className="block px-4 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-primary hover:text-white"
                   >
                     Industriereinigung

@@ -272,7 +272,7 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="/industrie"
+                  href="/industriereinigung"
                 >
                   Mehr erfahren
                 </a>
