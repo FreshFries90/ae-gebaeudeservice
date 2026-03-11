@@ -409,18 +409,18 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Containeranlagen */}
-            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
+            {/* Grundreinigung */}
+            <div className="md:col-span-2 bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
-                  factory
+                  cleaning_services
                 </span>
                 <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
-                  Containeranlagen
+                  Grundreinigung
                 </h4>
                 <p className="text-white/80 text-base sm:text-lg break-words">
-                  Reinigung kompletter Anlagen inkl. Sanitärbereiche &amp;
-                  Zugänge – auch kurzfristig.
+                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
+                  ideal bei Übergaben &amp; Neustarts.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
@@ -441,19 +441,18 @@ export default function Page() {
                 </a>
               </div>
             </div>
-
-            {/* Grundreinigung */}
+            {/* Spezialreinigung */}
             <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
               <div>
                 <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  cleaning_services
+                  auto_awesome
                 </span>
                 <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
-                  Grundreinigung
+                  Spezialreinigung
                 </h4>
                 <p className="text-gray-600 text-base sm:text-lg break-words">
-                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
-                  ideal bei Übergaben &amp; Neustarts.
+                  Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment
+                  für jede Herausforderung.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
@@ -472,38 +471,6 @@ export default function Page() {
                 >
                   Jetzt Termin sichern
                 </a>
-              </div>
-            </div>
-
-            {/* Wide card */}
-            <div className="lg:col-span-2 relative min-h-[320px] sm:min-h-[360px] md:min-h-[380px] overflow-hidden group">
-              <Image
-                alt="Spezialreinigung"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOeTddfqWrABKUhY1Y12znWO3uvVnJ9CgIgh5ZvJ1n1OU-QXHrtevwpDsq9hemKSagR7fUKK4XX-CsCJV1-T7G7HHdiLsDQ7Rw4aypoz0eZGjV3y3i8JcrvIlrdh-fCWEAh62zoo2-0erIc76RJgD8jGCZ0hhDXGEUFnxfv_OHPLoLd68s8LLtsJfkIXpT-RL191ksNXPtnKCTZVbyPdRDh-qrBI1-2BxGd4zEZ3Ox3dSn_nVoAlJLE6AxWksnbX3CbIkv3vbCDNg"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(min-width: 1024px) 66vw, 100vw"
-              />
-              <div className="absolute inset-0 bg-primary/90 mix-blend-multiply" />
-              <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12 min-w-0">
-                <h4 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-4 break-words">
-                  Spezialreinigung
-                </h4>
-                <p className="text-white text-base sm:text-lg md:text-xl max-w-lg mb-8 font-medium break-words">
-                  Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment
-                  für jede Herausforderung.
-                </p>
-                <div className="flex">
-                  <a
-                    className="bg-white text-primary font-black py-3 sm:py-4 px-6 sm:px-8 uppercase text-base sm:text-lg flex items-center gap-3 shadow-xl w-full sm:w-auto justify-center text-center break-words"
-                    href={`tel:${PHONE}`}
-                  >
-                    <span className="material-icons-outlined shrink-0">
-                      phone
-                    </span>
-                    Direkt Anrufen
-                  </a>
-                </div>
               </div>
             </div>
           </div>
