@@ -94,13 +94,17 @@ export default function IndustriePage() {
               <span className="material-icons-outlined text-3xl text-primary">
                 warehouse
               </span>
-              <span className="font-black uppercase">Werkshallen & Flächen</span>
+              <span className="font-black uppercase">
+                Werkshallen & Flächen
+              </span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="material-icons-outlined text-3xl text-primary">
                 verified
               </span>
-              <span className="font-black uppercase">Zuverlässige Ausführung</span>
+              <span className="font-black uppercase">
+                Zuverlässige Ausführung
+              </span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="material-icons-outlined text-3xl text-primary">
@@ -154,10 +158,11 @@ export default function IndustriePage() {
 
               <p>
                 Ob regelmäßig, bei erhöhtem Bedarf oder als gezielter Einsatz in
-                besonders stark verschmutzten Bereichen: Wir arbeiten pragmatisch,
-                zuverlässig und gut erreichbar. Statt langer Abstimmungen setzen
-                wir auf kurze Wege. Gerade im laufenden Betrieb ist der direkte
-                Anruf oft der schnellste Weg zur passenden Lösung.
+                besonders stark verschmutzten Bereichen: Wir arbeiten
+                pragmatisch, zuverlässig und gut erreichbar. Statt langer
+                Abstimmungen setzen wir auf kurze Wege. Gerade im laufenden
+                Betrieb ist der direkte Anruf oft der schnellste Weg zur
+                passenden Lösung.
               </p>
             </div>
 
@@ -247,12 +252,12 @@ export default function IndustriePage() {
             Industriereinigung ohne komplizierte Abstimmung
           </h2>
           <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300 md:text-xl">
-            Wenn du eine Industriereinigung, Hallenreinigung,
-            Maschinenreinigung oder eine zuverlässige Spezialreinigung für
-            Produktionsbereiche suchst, brauchst du vor allem einen
-            Ansprechpartner, der erreichbar ist und verbindlich reagiert. AE
-            Gebäudeservice steht für direkte Kommunikation, saubere Ausführung
-            und Einsätze, die sich an deinen betrieblichen Alltag anpassen.
+            Wenn du eine Industriereinigung, Hallenreinigung, Maschinenreinigung
+            oder eine zuverlässige Spezialreinigung für Produktionsbereiche
+            suchst, brauchst du vor allem einen Ansprechpartner, der erreichbar
+            ist und verbindlich reagiert. AE Gebäudeservice steht für direkte
+            Kommunikation, saubere Ausführung und Einsätze, die sich an deinen
+            betrieblichen Alltag anpassen.
           </p>
 
           <div className="mt-8">

@@ -272,9 +272,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/industrie"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
@@ -297,7 +297,9 @@ export default function Page() {
                   className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined shrink-0">phone</span>
+                  <span className="material-icons-outlined shrink-0">
+                    phone
+                  </span>
                   Anrufen
                 </a>
                 <a
@@ -360,7 +362,9 @@ export default function Page() {
                   className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined shrink-0">phone</span>
+                  <span className="material-icons-outlined shrink-0">
+                    phone
+                  </span>
                   Anrufen
                 </a>
                 <a
@@ -391,7 +395,9 @@ export default function Page() {
                   className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:text-white text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined shrink-0">phone</span>
+                  <span className="material-icons-outlined shrink-0">
+                    phone
+                  </span>
                   Anrufen
                 </a>
                 <a
@@ -446,8 +452,8 @@ export default function Page() {
                   Grundreinigung
                 </h4>
                 <p className="text-gray-600 text-base sm:text-lg break-words">
-                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen – ideal
-                  bei Übergaben &amp; Neustarts.
+                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
+                  ideal bei Übergaben &amp; Neustarts.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
@@ -455,7 +461,9 @@ export default function Page() {
                   className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
                   href={`tel:${PHONE}`}
                 >
-                  <span className="material-icons-outlined shrink-0">phone</span>
+                  <span className="material-icons-outlined shrink-0">
+                    phone
+                  </span>
                   Anrufen
                 </a>
                 <a
@@ -561,7 +569,9 @@ export default function Page() {
                   <span className="material-icons-outlined text-3xl md:text-4xl shrink-0">
                     phone_iphone
                   </span>
-                  <span className="break-all sm:break-normal">{PHONE_LABEL}</span>
+                  <span className="break-all sm:break-normal">
+                    {PHONE_LABEL}
+                  </span>
                 </a>
               </div>
             </div>
