@@ -185,7 +185,7 @@ export default function ContainerreinigungPage() {
             </h3>
             <p className="text-lg leading-relaxed text-gray-700">
               Wir reinigen Container dort, wo Sauberkeit, Hygiene und ein
-              gepflegter Zustand wichtig sind — von einzelnen Einheiten bis zu
+              gepflegter Zustand wichtig sind von einzelnen Einheiten bis zu
               kompletten Containeranlagen.
             </p>
           </div>
