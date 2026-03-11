@@ -59,6 +59,12 @@ export function SiteHeader() {
                   >
                     Industriereinigung
                   </a>
+                  <a
+                    href="/containerreinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-primary hover:text-white"
+                  >
+                    Containerreinigung
+                  </a>
                 </div>
               </div>
             </div>

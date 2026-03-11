@@ -402,9 +402,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-gray-500 hover:text-primary uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/containerreinigung"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
