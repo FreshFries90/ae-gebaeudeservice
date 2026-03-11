@@ -53,8 +53,6 @@ export function SiteHeader() {
                   >
                     Gebäudereinigung
                   </a>
-                </div>
-                <div className="min-w-[220px] overflow-hidden rounded-xl border-2 border-primary bg-white shadow-xl">
                   <a
                     href="/industrie"
                     className="block px-4 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-primary hover:text-white"
