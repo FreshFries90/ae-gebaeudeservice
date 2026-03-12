@@ -71,7 +71,7 @@ export default function Page() {
 
               <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-black leading-[0.95] text-white mb-6 md:mb-8 tracking-tighter break-words">
                 GLAS &amp;
-                <span className="text-primary italic">FASSADE</span>
+                <span className="text-primary italic">&nbsp;FASSADE</span>
                 <br />
                 <span className="text-2xl sm:text-3xl md:text-5xl block mt-3 md:mt-4 text-gray-300 break-words">
                   STREIFENFREI, SAUBER UND ZUVERLÄSSIG
