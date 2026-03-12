@@ -304,9 +304,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/glasreinigung"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
@@ -336,9 +336,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/baureinigung"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
@@ -369,9 +369,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/unterhaltsreinigung"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
@@ -435,9 +435,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/grundreinigung"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
@@ -467,9 +467,9 @@ export default function Page() {
                 </a>
                 <a
                   className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
-                  href="#quote"
+                  href="/spezialreinigung"
                 >
-                  Jetzt Termin sichern
+                  Mehr erfahren
                 </a>
               </div>
             </div>
