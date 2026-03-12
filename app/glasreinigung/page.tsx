@@ -109,7 +109,7 @@ export default function Page() {
               <div className="relative w-full max-w-lg aspect-square mask-blob shadow-2xl bg-gray-800 mx-auto overflow-hidden">
                 <Image
                   alt="Glas- und Fassadenreinigung"
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                  src="/images/glasreinigung.jpg"
                   fill
                   className="object-cover opacity-80"
                   sizes="(min-width: 1024px) 520px, 0px"

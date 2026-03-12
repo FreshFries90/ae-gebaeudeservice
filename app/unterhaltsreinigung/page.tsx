@@ -110,7 +110,7 @@ export default function Page() {
               <div className="relative w-full max-w-lg aspect-square mask-blob shadow-2xl bg-gray-800 mx-auto overflow-hidden">
                 <Image
                   alt="Unterhaltsreinigung in Büro und Treppenhaus"
-                  src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+                  src="/images/unterhaltsreinigung.jpg"
                   fill
                   className="object-cover opacity-80"
                   sizes="(min-width: 1024px) 520px, 0px"
