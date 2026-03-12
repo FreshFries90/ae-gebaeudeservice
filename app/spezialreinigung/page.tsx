@@ -71,6 +71,7 @@ export default function Page() {
 
               <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-black leading-[0.95] text-white mb-6 md:mb-8 tracking-tighter break-words">
                 SPEZIAL-
+                <br />
                 <span className="text-primary italic">REINIGUNG</span>
                 <br />
                 <span className="text-2xl sm:text-3xl md:text-5xl block mt-3 md:mt-4 text-gray-300 break-words">
