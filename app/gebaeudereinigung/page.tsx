@@ -1,6 +1,6 @@
-// app/gebaeudereinigung/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
+import GebaeudereinigungForm from "./GebaeudereinigungForm";
 
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
@@ -306,13 +306,56 @@ export default function GebaeudereinigungPage() {
 
           <div className="relative min-h-[320px] md:min-h-[500px] overflow-hidden shadow-2xl">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUfDnZc8IOnLj10TOOQqe0AdyEalHC1DWM6cmccKg5orMRjd2WlkEdMpHHgSJuBTtSuxVlWoxzXCskyj1P8k6VpuchM-aUod8stK6Cf8aQhNS00ijMxRIj-hV7Egb7RkMwVOSDgXsobxM_HCifkh8szkSXdUUbiC_oOrcvd8ySPe5-wO-H_2wNCJmYGptSSMyQrB4gM5r-2RY6JtRdjRghyxjoWlFE9bmC9N5L87WcjW3sBsOsy0vsZqfTa0EAS1hsaM0ZGfnDyKs"
+              src="/images/gebaeudereinigung-objekt.jpg"
               alt="Sauberes Objekt nach professioneller Gebäudereinigung"
               title="Sauberes Objekt nach professioneller Gebäudereinigung"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+          </div>
+        </div>
+      </section>
+
+      {/* Form / Quote */}
+      <section
+        className="py-16 sm:py-20 md:py-24 relative bg-background-dark overflow-hidden"
+        id="quote"
+      >
+        <div className="absolute inset-0 clip-diagonal bg-zinc-900 z-0" />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-start lg:items-center min-w-0">
+            <div className="text-white min-w-0">
+              <h2 className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-8 md:mb-10 break-words">
+                JETZT
+                <br />
+                <span className="text-primary">STARTEN.</span>
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-md italic break-words">
+                Ein kurzer Anruf spart oft viel Abstimmung. Wir sagen dir
+                direkt, was für dein Objekt sinnvoll ist und wie der Einsatz
+                schnell umgesetzt werden kann.
+              </p>
+
+              <div className="p-6 sm:p-8 md:p-10 bg-primary shadow-[10px_10px_0px_#000000] md:shadow-[15px_15px_0px_#000000] max-w-full overflow-hidden">
+                <p className="font-black text-black uppercase tracking-widest mb-4 text-sm break-words">
+                  Persönliche Beratung
+                </p>
+                <a
+                  className="text-2xl sm:text-3xl md:text-5xl font-black text-white flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 break-words leading-tight"
+                  href={`tel:${PHONE}`}
+                >
+                  <span className="material-icons-outlined text-3xl md:text-4xl shrink-0">
+                    phone_iphone
+                  </span>
+                  <span className="break-all sm:break-normal">
+                    {PHONE_LABEL}
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <GebaeudereinigungForm />
           </div>
         </div>
       </section>
@@ -338,7 +381,7 @@ export default function GebaeudereinigungPage() {
               Jetzt anrufen: {PHONE_LABEL}
             </a>
             <a
-              href="/#quote"
+              href="#quote"
               className="border-2 border-white/20 px-8 md:px-12 py-4 md:py-6 font-black text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
             >
               Angebot anfragen

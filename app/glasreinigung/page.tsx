@@ -1,59 +1,19 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
-
 import type { Metadata } from "next";
+import GlasFassadenreinigungForm from "./GlasFassadenreinigungForm";
 
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
+
 export const metadata: Metadata = {
   title: "Glas- & Fassadenreinigung | AE Gebäudeservice",
   description:
     "Reinigung von Glasflächen, Fenstern und Fassaden für Büros, Gewerbeobjekte und Immobilien. Jetzt anrufen und Termin sichern.",
 };
+
 export default function Page() {
-  const [status, setStatus] = useState<
-    "idle" | "sending" | "success" | "error"
-  >("idle");
-  const [error, setError] = useState<string>("");
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sending");
-    setError("");
-
-    const formEl = e.currentTarget;
-    const fd = new FormData(formEl);
-
-    try {
-      const res = await fetch("/api/contact", { method: "POST", body: fd });
-
-      if (res.status === 204) {
-        setStatus("success");
-        formEl.reset();
-        return;
-      }
-
-      const data = await res.json().catch(() => null);
-
-      if (!res.ok || !data?.ok) {
-        setStatus("error");
-        setError(data?.error || "Senden fehlgeschlagen.");
-        return;
-      }
-
-      setStatus("success");
-      formEl.reset();
-    } catch {
-      setStatus("error");
-      setError("Netzwerkfehler. Bitte später erneut versuchen.");
-    }
-  }
-
   return (
     <>
-      {/* Floating Call Button */}
       <a
         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[60] flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-primary text-white rounded-full shadow-[0_0_30px_rgba(22,163,74,0.6)] animate-bounce hover:scale-110 transition-transform"
         href={`tel:${PHONE}`}
@@ -64,7 +24,6 @@ export default function Page() {
         </span>
       </a>
 
-      {/* Hero */}
       <section className="relative min-h-screen flex flex-col pt-10 sm:pt-12 md:pt-16 pb-0 overflow-hidden bg-background-dark">
         <div className="absolute top-0 right-0 w-[70%] md:w-[60%] h-full bg-primary/10 -skew-x-12 translate-x-1/4 z-0" />
 
@@ -127,7 +86,6 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Trust Bar */}
         <div className="w-full bg-white py-8 sm:py-10 relative z-20 border-t-4 border-primary mt-8 md:mt-12">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-24 grayscale opacity-70 hover:grayscale-0 transition-all text-center">
@@ -168,7 +126,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA Strip */}
       <section className="bg-primary py-6 md:py-8 overflow-hidden relative border-y-4 border-black">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 min-w-0">
           <div className="flex items-center gap-4 md:gap-6 min-w-0">
@@ -194,7 +151,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Intro */}
       <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mb-12 md:mb-16">
@@ -260,7 +216,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Content */}
       <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
@@ -361,7 +316,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Extra section */}
       <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl">
@@ -419,7 +373,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Questions CTA */}
       <section className="py-16 sm:py-20 md:py-24 bg-gray-900 overflow-hidden relative">
         <div className="container mx-auto px-4 text-center min-w-0">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-6 md:mb-8 break-words">
@@ -449,7 +402,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Quote */}
       <section
         className="py-16 sm:py-20 md:py-24 relative bg-background-dark overflow-hidden"
         id="quote"
@@ -486,122 +438,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="relative min-w-0">
-              <div className="absolute inset-0 bg-primary translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
-
-              <form
-                className="bg-white p-6 sm:p-8 md:p-10 relative z-10 min-w-0"
-                onSubmit={onSubmit}
-              >
-                <h3 className="text-3xl sm:text-4xl font-black text-black uppercase mb-6 md:mb-8 border-b-4 border-primary pb-4 break-words">
-                  Schnell-Angebot
-                </h3>
-
-                <div className="hidden" aria-hidden="true">
-                  <label>
-                    Bitte leer lassen
-                    <input
-                      type="text"
-                      name="company"
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
-                  </label>
-                </div>
-
-                <div className="space-y-6 min-w-0">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <div className="min-w-0">
-                      <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
-                        Telefonnummer
-                      </label>
-                      <input
-                        className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
-                        placeholder="+49..."
-                        type="tel"
-                        name="phone"
-                        required
-                      />
-                    </div>
-
-                    <div className="min-w-0">
-                      <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
-                        Ihr Name
-                      </label>
-                      <input
-                        className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
-                        placeholder="Name"
-                        type="text"
-                        name="name"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="min-w-0">
-                    <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
-                      Service
-                    </label>
-                    <select
-                      className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
-                      name="service"
-                      defaultValue="Glasreinigung"
-                      required
-                    >
-                      <option>Glasreinigung</option>
-                      <option>Fassadenreinigung</option>
-                      <option>Unterhaltsreinigung</option>
-                      <option>Grundreinigung</option>
-                      <option>Baureinigung</option>
-                      <option>Industriereinigung</option>
-                    </select>
-                  </div>
-
-                  <div className="min-w-0">
-                    <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
-                      Kurze Info
-                    </label>
-                    <textarea
-                      className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all min-h-[120px] resize-y"
-                      name="message"
-                      placeholder="Zum Beispiel: Bürofront, Schaufenster, Glasflächen, Fassade, regelmäßiger Turnus, schwer zugängliche Bereiche ..."
-                    />
-                  </div>
-
-                  <button
-                    className="w-full bg-black text-white font-black uppercase text-base sm:text-lg md:text-xl py-5 sm:py-6 hover:bg-primary transition-all flex items-center justify-center gap-3 group disabled:opacity-60 text-center break-words"
-                    type="submit"
-                    disabled={status === "sending"}
-                  >
-                    <span className="break-words">
-                      {status === "sending"
-                        ? "SENDET..."
-                        : "JETZT TERMIN SICHERN"}
-                    </span>
-                    <span className="material-icons-outlined group-hover:translate-x-2 transition-transform shrink-0">
-                      arrow_forward
-                    </span>
-                  </button>
-
-                  {status === "success" && (
-                    <div className="rounded-lg border-2 border-green-600 bg-green-50 p-4 text-green-800 font-bold break-words">
-                      Danke! Wir melden uns schnellstmöglich.
-                    </div>
-                  )}
-
-                  {status === "error" && (
-                    <div className="rounded-lg border-2 border-red-600 bg-red-50 p-4 text-red-800 font-bold break-words">
-                      {error || "Senden fehlgeschlagen."}
-                    </div>
-                  )}
-
-                  <p className="text-xs text-gray-500 leading-relaxed break-words">
-                    Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben
-                    zur Bearbeitung Ihrer Anfrage zu.
-                  </p>
-                </div>
-              </form>
-            </div>
+            <GlasFassadenreinigungForm />
           </div>
         </div>
       </section>
