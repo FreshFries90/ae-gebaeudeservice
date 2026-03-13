@@ -135,7 +135,7 @@ export default function Page() {
               </div>
               <div className="flex items-center gap-2 min-w-0">
                 <span className="material-icons-outlined text-2xl sm:text-3xl text-primary shrink-0">
-                  sanitization
+                   clean_hands
                 </span>
                 <span className="font-black text-base sm:text-lg md:text-xl tracking-tighter uppercase italic break-words">
                   Sanitär & Kontaktflächen
