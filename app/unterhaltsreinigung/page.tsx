@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
+import type { Metadata } from "next";
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
+export const metadata: Metadata = {
+  title: "Unterhaltsreinigung | AE Gebäudeservice",
+  description:
+    "Unterhaltsreinigung für Büros, Flure, Treppenhäuser und gewerblich genutzte Flächen. Jetzt anrufen und Termin sichern.",
+};
 
 export default function Page() {
   const [status, setStatus] = useState<
