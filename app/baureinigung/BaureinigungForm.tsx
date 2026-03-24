@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 
-export default function BaureinigungForm() {
+type BaureinigungFormProps = {
+  cityDefault?: string;
+};
+
+export default function BaureinigungForm({
+  cityDefault = "",
+}: BaureinigungFormProps) {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -94,23 +100,39 @@ export default function BaureinigungForm() {
             </div>
           </div>
 
-          <div className="min-w-0">
-            <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
-              Service
-            </label>
-            <select
-              className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
-              name="service"
-              defaultValue="Baureinigung"
-              required
-            >
-              <option>Baureinigung</option>
-              <option>Unterhaltsreinigung</option>
-              <option>Industriereinigung</option>
-              <option>Glasreinigung</option>
-              <option>Containerreinigung</option>
-              <option>Grundreinigung</option>
-            </select>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="min-w-0">
+              <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
+                Stadt
+              </label>
+              <input
+                className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all"
+                placeholder="z. B. Essen"
+                type="text"
+                name="city"
+                defaultValue={cityDefault}
+                required
+              />
+            </div>
+
+            <div className="min-w-0">
+              <label className="block text-xs font-black text-gray-400 uppercase mb-2 break-words">
+                Service
+              </label>
+              <select
+                className="w-full min-w-0 bg-gray-100 border-2 border-gray-100 p-4 font-bold text-black focus:border-primary focus:bg-white outline-none transition-all appearance-none"
+                name="service"
+                defaultValue="Baureinigung"
+                required
+              >
+                <option>Baureinigung</option>
+                <option>Unterhaltsreinigung</option>
+                <option>Industriereinigung</option>
+                <option>Glasreinigung</option>
+                <option>Containerreinigung</option>
+                <option>Grundreinigung</option>
+              </select>
+            </div>
           </div>
 
           <div className="min-w-0">
