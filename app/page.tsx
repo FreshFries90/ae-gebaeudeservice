@@ -28,16 +28,6 @@ export default function Page() {
       const res = await fetch("/api/contact", { method: "POST", body: fd });
       if (res.status === 204) {
         setStatus("success");
-        if (typeof window !== "undefined") {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "form_submit",
-          form_name: "schnell_angebot",
-          form_location: "startseite",
-          service: fd.get("service") || "",
-        });
-        console.log("Gesendet");
-      }
         formEl.reset();
         return;
       }
@@ -51,6 +41,17 @@ export default function Page() {
       }
 
       setStatus("success");
+      
+        if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "form_submit",
+          form_name: "schnell_angebot",
+          form_location: "startseite",
+          service: fd.get("service") || "",
+        });
+        console.log("Gesendet");
+      }
       formEl.reset();
     } catch {
       setStatus("error");
