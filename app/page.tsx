@@ -33,7 +33,7 @@ export default function Page() {
         window.dataLayer.push({
           event: "form_submit",
           form_name: "schnell_angebot",
-          form_location: "quote_section",
+          form_location: "startseite",
           service: fd.get("service") || "",
         });
       }
