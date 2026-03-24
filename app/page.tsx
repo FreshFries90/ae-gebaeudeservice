@@ -36,6 +36,7 @@ export default function Page() {
           form_location: "startseite",
           service: fd.get("service") || "",
         });
+        console.log("Gesendet");
       }
         formEl.reset();
         return;
