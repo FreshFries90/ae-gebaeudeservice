@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
+declare global {
+  interface Window {
+    dataLayer: Array<Record<string, unknown>>;
+  }
+}
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
 
@@ -24,6 +28,15 @@ export default function Page() {
       const res = await fetch("/api/contact", { method: "POST", body: fd });
       if (res.status === 204) {
         setStatus("success");
+        if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "form_submit",
+          form_name: "schnell_angebot",
+          form_location: "quote_section",
+          service: fd.get("service") || "",
+        });
+      }
         formEl.reset();
         return;
       }
