@@ -50,7 +50,6 @@ export default function Page() {
           form_location: "startseite",
           service: fd.get("service") || "",
         });
-        console.log("Gesendet");
       }
       formEl.reset();
     } catch {
@@ -262,232 +261,218 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
-                  precision_manufacturing
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
-                  Industrie
-                </h4>
-                <p className="text-white/80 text-base sm:text-lg break-words">
-                  Spezialreinigung für Maschinen und Werkshallen.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center justify-center gap-2 text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined text-sm shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="/industriereinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
+{/* Card 2 */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      precision_manufacturing
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Industrie
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Spezialreinigung für Maschinen und Werkshallen.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/industriereinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
 
-            {/* Card 3 */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  window
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
-                  Glas &amp; Fassade
-                </h4>
-                <p className="text-gray-600 text-base sm:text-lg break-words">
-                  Streifenfreier Glanz, auch in extremer Höhe.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
-                  href="/glasreinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
+{/* Card 3 */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      window
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Glas &amp; Fassade
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Streifenfreier Glanz, auch in extremer Höhe.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/glasreinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
 
-            {/* Card 4 */}
-            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
-                  construction
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
-                  Baureinigung
-                </h4>
-                <p className="text-white/80 text-base sm:text-lg break-words">
-                  Vom Rohbau bis zur Schlüsselübergabe.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center justify-center gap-2 text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined text-sm shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="/baureinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
+{/* Card 4 */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      construction
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Baureinigung
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Vom Rohbau bis zur Schlüsselübergabe.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/baureinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
 
-            {/* Unterhaltsreinigung */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  apartment
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
-                  Unterhaltsreinigung
-                </h4>
-                <p className="text-gray-600 text-base sm:text-lg break-words">
-                  Büros, Flure &amp; Treppenhäuser – zuverlässig im festen
-                  Turnus.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
-                  href="/unterhaltsreinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
+{/* Unterhaltsreinigung */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      apartment
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Unterhaltsreinigung
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Büros, Flure &amp; Treppenhäuser – zuverlässig im festen Turnus.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/unterhaltsreinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
 
-            {/* Containerreinigung */}
-            <div className="bg-black text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  local_shipping
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
-                  Containerreinigung
-                </h4>
-                <p className="text-gray-400 text-base sm:text-lg break-words">
-                  Innen &amp; Außen gründlich gereinigt – hygienisch und schnell
-                  wieder einsatzbereit.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:text-white text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-primary uppercase text-sm text-center break-words"
-                  href="/containerreinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
+{/* Containerreinigung */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      local_shipping
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Containerreinigung
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Innen &amp; Außen gründlich gereinigt – hygienisch und schnell wieder
+      einsatzbereit.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/containerreinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
 
-            {/* Grundreinigung */}
-            <div className="bg-primary text-white p-6 sm:p-8 md:p-10 flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-white text-4xl md:text-5xl mb-6 block">
-                  cleaning_services
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black uppercase mb-4 break-words">
-                  Grundreinigung
-                </h4>
-                <p className="text-white/80 text-base sm:text-lg break-words">
-                  Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen –
-                  ideal bei Übergaben &amp; Neustarts.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="bg-black text-white font-black py-2 px-4 uppercase text-xs flex items-center justify-center gap-2 text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined text-sm shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-black uppercase text-sm text-center break-words"
-                  href="/grundreinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
-            {/* Spezialreinigung */}
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
-              <div>
-                <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
-                  auto_awesome
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
-                  Spezialreinigung
-                </h4>
-                <p className="text-gray-600 text-base sm:text-lg break-words">
-                  Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment
-                  für jede Herausforderung.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 min-w-0">
-                <a
-                  className="text-primary font-black uppercase flex items-center justify-center sm:justify-start gap-2 hover:underline text-center break-words"
-                  href={`tel:${PHONE}`}
-                >
-                  <span className="material-icons-outlined shrink-0">
-                    phone
-                  </span>
-                  Anrufen
-                </a>
-                <a
-                  className="font-bold text-gray-500 hover:text-black uppercase text-sm text-center break-words"
-                  href="/spezialreinigung"
-                >
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
+{/* Grundreinigung */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      cleaning_services
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Grundreinigung
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Tiefenreinigung für Böden, Sanitär &amp; Kontaktflächen – ideal bei
+      Übergaben &amp; Neustarts.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/grundreinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
+
+{/* Spezialreinigung */}
+<div className="bg-gray-50 p-6 sm:p-8 md:p-10 border-l-8 border-primary flex flex-col gap-8">
+  <div>
+    <span className="material-icons-outlined text-primary text-4xl md:text-5xl mb-6 block">
+      auto_awesome
+    </span>
+    <h4 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase mb-4 break-words">
+      Spezialreinigung
+    </h4>
+    <p className="text-gray-600 text-base sm:text-lg break-words">
+      Sonderfälle? Teppiche? Praxen? Wir haben das Spezial-Equipment für jede
+      Herausforderung.
+    </p>
+  </div>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a
+      className="inline-flex items-center justify-center gap-2 bg-primary text-white font-black uppercase text-sm py-3 px-5 hover:opacity-90 transition text-center"
+      href={`tel:${PHONE}`}
+    >
+      <span className="material-icons-outlined text-sm shrink-0">phone</span>
+      Anrufen
+    </a>
+    <a
+      className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-black uppercase text-sm py-3 px-5 hover:bg-primary hover:text-white transition text-center"
+      href="/spezialreinigung"
+    >
+      Mehr erfahren
+    </a>
+  </div>
+</div>
           </div>
         </div>
       </section>
