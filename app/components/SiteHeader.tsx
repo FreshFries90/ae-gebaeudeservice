@@ -181,7 +181,7 @@ export function SiteHeader() {
                     Containerreinigung
                   </a>
                   <a
-                    href="/gebaudereinigung"
+                    href="/gebaeudereinigung"
                     className="block px-4 py-3 text-sm font-semibold text-gray-800"
                     onClick={() => {
                       setMobileServicesOpen(false);
