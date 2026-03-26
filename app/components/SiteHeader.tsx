@@ -161,6 +161,26 @@ export function SiteHeader() {
               {mobileServicesOpen && (
                 <div className="border-b border-gray-200 bg-gray-50">
                   <a
+                    href="/baureinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Baureinigung
+                  </a>
+                  <a
+                    href="/containerreinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Containerreinigung
+                  </a>
+                  <a
                     href="/gebaudereinigung"
                     className="block px-4 py-3 text-sm font-semibold text-gray-800"
                     onClick={() => {
@@ -170,16 +190,56 @@ export function SiteHeader() {
                   >
                     Gebäudereinigung
                   </a>
-
-                  {/*
-                    Weitere Leistungen später hier ergänzen:
-                    <a
-                      href="/fensterreinigung"
-                      className="block px-4 py-3 text-sm font-semibold text-gray-800"
-                    >
-                      Fensterreinigung
-                    </a>
-                  */}
+                  <a
+                    href="/glasreinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Glas & Fassade
+                  </a>
+                  <a
+                    href="/grundreinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Grundreinigung
+                  </a>
+                  <a
+                    href="/industriereinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Industriereinigung
+                  </a>
+                  <a
+                    href="/spezialreinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Spezialreinigung
+                  </a>
+                  <a
+                    href="/unterhaltsreinigung"
+                    className="block px-4 py-3 text-sm font-semibold text-gray-800"
+                    onClick={() => {
+                      setMobileServicesOpen(false);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Unterhaltsreinigung
+                  </a>
                 </div>
               )}
 
