@@ -656,7 +656,7 @@ export default function Page() {
         id="einsatz"
         headline="In diesen Städten sind wir für dich da"
         description="Wähle die gewünschte Leistung – danach siehst du alle Städte, in denen wir diese Arbeiten regelmäßig durchführen."
-        defaultService="haushaltsaufloesung"
+        defaultService="gebaeudereinigung"
       />
     </>
   );
