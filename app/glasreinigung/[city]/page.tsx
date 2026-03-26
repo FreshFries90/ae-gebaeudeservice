@@ -376,7 +376,7 @@ export default async function GlasreinigungCityPage({ params }: Props) {
               </div>
             </div>
 
-            <GlasreinigungForm />
+            <GlasFassadenreinigungForm />
           </div>
         </div>
       </section>
