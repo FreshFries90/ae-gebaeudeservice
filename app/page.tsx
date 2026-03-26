@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+
+import { ServiceCitiesSection } from "@/components/sections/ServiceCitiesSection";
 declare global {
   interface Window {
     dataLayer: Array<Record<string, unknown>>;
@@ -650,6 +652,12 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <ServiceCitiesSection
+        id="einsatz"
+        headline="In diesen Städten sind wir für dich da"
+        description="Wähle die gewünschte Leistung – danach siehst du alle Städte, in denen wir diese Arbeiten regelmäßig durchführen."
+        defaultService="haushaltsaufloesung"
+      />
     </>
   );
 }
