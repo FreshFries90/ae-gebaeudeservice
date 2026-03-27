@@ -330,7 +330,7 @@ export default async function UnterhaltsreinigungCityPage({ params }: Props) {
 
           <div className="relative min-h-[320px] md:min-h-[500px] overflow-hidden shadow-2xl">
             <Image
-              src="/images/objektpflege.jpg"
+              src="/images/unterhaltsobjekt-detail.jpg"
               alt={`Sauberes Objekt nach professioneller Unterhaltsreinigung in ${cityName}`}
               fill
               className="object-cover"
