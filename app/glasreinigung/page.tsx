@@ -443,6 +443,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <ServiceCitiesSection defaultService="glasreinigung" />
     </>
   );
 }
