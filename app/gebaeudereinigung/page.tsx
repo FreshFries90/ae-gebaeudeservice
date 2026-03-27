@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import GebaeudereinigungForm from "./GebaeudereinigungForm";
 
+import { ServiceCitiesSection } from "@/app/components/ServiceCitiesSection";
+
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
 
@@ -389,6 +391,8 @@ export default function GebaeudereinigungPage() {
           </div>
         </div>
       </section>
+
+      <ServiceCitiesSection defaultService="gebaeudereinigung" />
     </>
   );
 }

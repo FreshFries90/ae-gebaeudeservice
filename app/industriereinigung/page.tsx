@@ -1,6 +1,7 @@
 // app/industrie/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
+import { ServiceCitiesSection } from "@/app/components/ServiceCitiesSection";
 
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
@@ -340,6 +341,8 @@ export default function IndustriePage() {
           </a>
         </div>
       </section>
+
+      <ServiceCitiesSection defaultService="industriereinigung" />
     </>
   );
 }
