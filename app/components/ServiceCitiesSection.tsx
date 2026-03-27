@@ -17,11 +17,17 @@ const SERVICES = [
 
 type ServiceSlug = (typeof SERVICES)[number]["slug"];
 
+type ServiceCitiesSectionProps = {
+  defaultService?: ServiceSlug;
+};
+
 const DEFAULT_SERVICE: ServiceSlug = "gebaeudereinigung";
 
-export function ServiceCitiesSection() {
+export function ServiceCitiesSection({
+  defaultService = DEFAULT_SERVICE,
+}: ServiceCitiesSectionProps) {
   const [activeService, setActiveService] =
-    useState<ServiceSlug>(DEFAULT_SERVICE);
+    useState<ServiceSlug>(defaultService);
   const [search, setSearch] = useState("");
 
   const cities = useMemo(() => {
@@ -56,9 +62,7 @@ export function ServiceCitiesSection() {
             Städte & Leistungen
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 max-w-3xl">
-            Standardmäßig sehen Sie alle Städte für Gebäudereinigung. Wechseln
-            Sie oben einfach die Kategorie oder suchen Sie direkt nach Ihrer
-            Stadt.
+            Suchen Sie direkt nach Ihrer Stadt oder wechseln Sie die Kategorie.
           </p>
         </div>
 
