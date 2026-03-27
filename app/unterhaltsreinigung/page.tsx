@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import UnterhaltsreinigungForm from "./UnterhaltsreinigungForm";
-import { ServiceCitiesSection } from "./components/ServiceCitiesSection";
 
 const PHONE = "+491757540841";
 const PHONE_LABEL = "0175 75 40 841";
@@ -452,7 +451,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <ServiceCitiesSection />
     </>
   );
 }
