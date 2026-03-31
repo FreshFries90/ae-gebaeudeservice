@@ -16,6 +16,7 @@ const STATIC_ROUTES = [
   "/unterhaltsreinigung",
   "/impressum",
   "/datenschutz",
+  "/einsatzgebiete",
 ] as const;
 
 const CITY_SERVICES = [

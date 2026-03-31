@@ -242,7 +242,13 @@ export function SiteHeader() {
                   </a>
                 </div>
               )}
-
+              <a
+                href="/einsatzgebiete"
+                className="border-b border-gray-200 px-1 py-3 text-sm font-bold uppercase tracking-wider text-gray-900"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Einsatzgebiete
+              </a>
               <a
                 href="#quote"
                 className="mt-4 inline-flex w-full items-center justify-center rounded-lg border-2 border-primary bg-primary px-4 py-3 text-sm font-black uppercase tracking-wider text-white"
