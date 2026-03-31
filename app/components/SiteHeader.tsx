@@ -98,6 +98,12 @@ export function SiteHeader() {
                 </div>
               </div>
             </div>
+            <a
+              href="/einsatzgebiete"
+              className="text-sm font-bold uppercase tracking-wider text-gray-900 transition-colors hover:text-primary"
+            >
+              Einsatzgebiete
+            </a>
           </nav>
         </div>
 
