@@ -103,6 +103,11 @@ export function SiteHeader() {
               className="text-sm font-bold uppercase tracking-wider text-gray-900 transition-colors hover:text-primary"
             >
               Einsatzgebiete
+            </a><a
+              href="/blog"
+              className="text-sm font-bold uppercase tracking-wider text-gray-900 transition-colors hover:text-primary"
+            >
+              Blog
             </a>
           </nav>
         </div>
@@ -254,6 +259,12 @@ export function SiteHeader() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Einsatzgebiete
+              </a><a
+                href="/blog"
+                className="border-b border-gray-200 px-1 py-3 text-sm font-bold uppercase tracking-wider text-gray-900"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
               </a>
               <a
                 href="#quote"

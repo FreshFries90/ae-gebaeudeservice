@@ -1,11 +1,13 @@
 // app/sitemap.ts
 import type { MetadataRoute } from "next";
 import { CITY_WHITELIST } from "@/lib/cities";
+import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://aegebaeudeservice.de";
 
 const STATIC_ROUTES = [
   "",
+  "/blog",
   "/gebaeudereinigung",
   "/baureinigung",
   "/containerreinigung",
@@ -37,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}${route}`,
     lastModified: now,
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
+    priority: route === "" ? 1 : route === "/blog" ? 0.85 : 0.8,
   }));
 
   const cityPages: MetadataRoute.Sitemap = CITY_SERVICES.flatMap((service) =>
@@ -49,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...staticPages, ...cityPages];
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: post.status === "published" ? 0.75 : 0.3,
+  }));
+
+  return [...staticPages, ...cityPages, ...blogPages];
 }
