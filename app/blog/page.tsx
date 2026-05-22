@@ -45,14 +45,9 @@ export default function BlogPage() {
                 Aktuell veröffentlicht
               </p>
               <h2 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">
-                5 neue Blogbeiträge
+                5 Blogbeiträge
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-relaxed text-text-muted md:text-base">
-              Alle Beiträge sind ausführlich geschrieben, suchmaschinenfreundlich
-              aufgebaut und thematisch passend zu den wichtigsten Leistungen von
-              AE Gebäudeservice.
-            </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
@@ -110,61 +105,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="bg-white py-14 md:py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-primary">
-              Redaktion geplant
-            </p>
-            <h2 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">
-              2 Beiträge für nächste Woche vorbereitet
-            </h2>
-            <p className="mt-4 text-text-muted">
-              Die geplanten Beiträge sind bereits als Entwurf angelegt und können
-              zum angegebenen Datum veröffentlicht oder vorher noch angepasst
-              werden.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {plannedBlogPosts.map((post) => (
-              <article
-                key={post.slug}
-                className="rounded-[2rem] border-2 border-dashed border-primary/40 bg-background-light p-6 md:p-8"
-              >
-                <div className="mb-5 flex items-center justify-between gap-4">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-black uppercase tracking-widest text-primary">
-                    <span className="material-icons-outlined text-base">
-                      schedule
-                    </span>
-                    geplant
-                  </span>
-                  <span className="text-sm font-bold text-gray-500">
-                    {formatBlogDate(post.plannedFor || post.date)}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-black tracking-tight">
-                  {post.title}
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-text-muted md:text-base">
-                  {post.excerpt}
-                </p>
-                <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 pt-5">
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-500">
-                    ca. {getPostWordCount(post)} Wörter
-                  </span>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="font-black uppercase tracking-wider text-primary hover:text-primary-dark"
-                  >
-                    Entwurf ansehen →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <section className="bg-background-dark py-14 text-white md:py-20">
         <div className="container mx-auto px-4 md:px-6">
