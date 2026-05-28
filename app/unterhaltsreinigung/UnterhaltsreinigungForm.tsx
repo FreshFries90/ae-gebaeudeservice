@@ -107,12 +107,14 @@ export default function UnterhaltsreinigungForm() {
               defaultValue="Unterhaltsreinigung"
               required
             >
-              <option>Unterhaltsreinigung</option>
-              <option>Büroreinigung</option>
-              <option>Treppenhausreinigung</option>
-              <option>Grundreinigung</option>
+              <option>Baureinigung</option>
+              <option>Containerreinigung</option>
+              <option>Gebäudereinigung</option>
               <option>Glasreinigung</option>
+              <option>Grundreinigung</option>
               <option>Industriereinigung</option>
+              <option>Spezialreinigung</option>
+              <option>Unterhaltsreinigung</option>
             </select>
           </div>
 

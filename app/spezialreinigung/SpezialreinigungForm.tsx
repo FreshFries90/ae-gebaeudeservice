@@ -104,11 +104,13 @@ export default function SpezialreinigungForm() {
               defaultValue="Spezialreinigung"
               required
             >
-              <option>Spezialreinigung</option>
-              <option>Teppichreinigung</option>
-              <option>Polsterreinigung</option>
-              <option>Praxisreinigung</option>
+              <option>Baureinigung</option>
+              <option>Containerreinigung</option>
+              <option>Gebäudereinigung</option>
+              <option>Glasreinigung</option>
               <option>Grundreinigung</option>
+              <option>Industriereinigung</option>
+              <option>Spezialreinigung</option>
               <option>Unterhaltsreinigung</option>
             </select>
           </div>

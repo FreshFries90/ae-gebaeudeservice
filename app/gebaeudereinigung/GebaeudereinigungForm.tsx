@@ -104,12 +104,14 @@ export default function GebaeudereinigungForm() {
               defaultValue="Gebäudereinigung"
               required
             >
+              <option>Baureinigung</option>
+              <option>Containerreinigung</option>
               <option>Gebäudereinigung</option>
-              <option>Büroreinigung</option>
-              <option>Treppenhausreinigung</option>
-              <option>Unterhaltsreinigung</option>
-              <option>Grundreinigung</option>
               <option>Glasreinigung</option>
+              <option>Grundreinigung</option>
+              <option>Industriereinigung</option>
+              <option>Spezialreinigung</option>
+              <option>Unterhaltsreinigung</option>
             </select>
           </div>
 
