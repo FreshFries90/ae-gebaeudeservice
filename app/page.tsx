@@ -622,12 +622,14 @@ export default function Page() {
                       defaultValue="Unterhaltsreinigung"
                       required
                     >
-                      <option>Unterhaltsreinigung</option>
-                      <option>Industriereinigung</option>
-                      <option>Glasreinigung</option>
                       <option>Baureinigung</option>
                       <option>Containerreinigung</option>
+                      <option>Gebäudereinigung</option>
+                      <option>Glasreinigung</option>
                       <option>Grundreinigung</option>
+                      <option>Industriereinigung</option>
+                      <option>Spezialreinigung</option>
+                      <option>Unterhaltsreinigung</option>
                     </select>
                   </div>
 
